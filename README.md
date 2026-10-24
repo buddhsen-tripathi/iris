@@ -1,37 +1,53 @@
-# Iris research and paper trading lab
+# Iris
 
-Historical data, causal features, and a reproducible model-training/paper-replay pipeline for the attached Iris design. Current targets are **5, 15, and 30 minutes**. Live execution is not enabled.
+Iris is a trading desk and research lab built on [True Markets](https://docs.truemarkets.co/) market data. It has two parts:
 
-## Broad US stock relationship data
+- **Trading desk** (`web/`): live market views, order flow, news with AI sentiment, an AI desk analyst, point-and-ask on any element, a company relationship graph, a creators feed, and your True Markets portfolio with guarded live trading.
+- **Research pipeline** (Python, `src/alphacouncil/`): historical data collection, causal features, 5/15/30-minute expert models, live-data paper forward testing, an adaptive committee, an independent risk engine, and a company knowledge graph on Neon. The research pipeline itself never places orders.
 
-The first [evidence graph dataset](reports/knowledge_foundation.md) is collected: 7,481 US-listed non-ETF securities, 1,814 accounting consolidation records, 26 full annual reports/filings, five issuer announcements and one annual overview. Candidate mentions remain separate from reviewed publisher claims; accounting links are not supply-chain links. The [complete graph explorer](http://localhost:5180/?view=relationships) loads **all 16,911 nodes and 15,411 assertions from Neon** into a WebGL map, including disconnected companies. Search the full directory by company, ticker or material; select an entity to highlight its connections and browse every source assertion in the paginated ledger. All three assertion statuses are shown initially and can be filtered. All **12,441 passages are embedded in pgvector** for semantic/keyword source search. Click **Asset graph** in the trading desk to open it. Automated news-to-graph enrichment and validated financial impact modeling remain future work. [Neon implementation and validation](reports/knowledge_neon.md).
+## Screenshots
+
+**Trading desk.** Portfolio, chart with indicators, perp order book, live order flow, and news scored by AI. Here, point-and-ask is answering "What should I watch here?" about the chart.
+
+![Trading desk with a point-and-ask answer on the SOL chart](docs/screenshots/trading-desk.jpg)
+
+**Relationship graph.** The research view of the company graph, focused on NVIDIA: reported and candidate links, the evidence ledger, and its strongest connections.
+
+![Relationship graph focused on NVIDIA](docs/screenshots/relationship-graph.jpg)
+
+**Ask the graph.** Evidence-led research on a company, here Target's leadership, with every claim tied to a cited source.
+
+![Ask the graph showing people research for Target](docs/screenshots/graph-people-research.jpg)
+
+**Creators.** A short-form feed of finance creators, with the assets mentioned in each video and paper investing.
+
+![Creators feed](docs/screenshots/creators-feed.jpg)
+
+## Quick start
 
 ```sh
-uv sync --locked --group knowledge
-uv run --group knowledge python scripts/collect_knowledge.py --phase all --limit-issuers 105
-uv run --group knowledge python scripts/index_knowledge.py
-uv run python scripts/export_knowledge.py
-uv run python scripts/query_knowledge.py 'NVIDIA TSMC Micron packaging' --entity equity:NASDAQ:NVDA --max-hops 3
-# Publish the pinned local corpus to the configured Neon database and embed missing passages:
-uv run --group knowledge python scripts/publish_knowledge_neon.py --embed
+# Trading desk
+cd web && npm install
+cp .env.example .env.local   # optional: AI, Neon storage, True Markets trading
+npm run db:migrate           # only if DATABASE_URL is set
+npm run dev                  # http://localhost:5180
+npm test && npm run build    # unit tests, typecheck and production build
+
+# Research pipeline (from the repository root, with uv)
+uv sync --locked --group training --group analysis --group web
+uv run --group training --group analysis --group web pytest -q
 ```
 
-The graph snapshot is saved for **24 hours** in browser IndexedDB and a private server disk cache; saved layout positions are reused across reloads. It does not poll or automatically refetch on focus/reconnect. **Refresh data** explicitly revalidates Neon; unchanged data returns HTTP 304 and keeps the layout. The saved graph remains usable when API reads are unavailable.
+Market data, charts, order flow and news work with no keys. Everything else is optional. Set it in `web/.env.local`, which only the dev server reads:
+- `OPENROUTER_API_KEY` turns on the AI features.
+- `DATABASE_URL` (Neon) keeps news reads and the trade log.
+- `KNOWLEDGE_DATABASE_URL` serves the relationship graph.
+- `EXA_API_KEY` enables people research.
+- `TM_KEY_FILE` connects your True Markets account. Live orders also need `TM_TRADING_ENABLED=true`.
 
-**Ask the graph** opens a source-grounded OpenRouter agent for relationship questions, industry themes and stock research shortlists. It retrieves graph links and semantic report passages, cites sources, validates listed company identities, and includes risks/missing checks with suggestions. Identical conversations against the same snapshot reuse answers for 30 minutes in server memory. It uses the collected corpus, not live prices or a validated stock-return model. [Caching, analyst details and validation](reports/graph_cache_and_agent.md).
+## Trading desk
 
-**Research people & backgrounds** in a company's graph details uses the server-side `EXA_API_KEY` to find public professional profiles, company roles, previous experience, education and research. Each returned claim includes an exact source excerpt and citation. Exa sources are cached for 24 hours; profiles remain research leads separate from accepted graph relationships. [People research implementation and validation](reports/people_research.md).
-
-The Python API on port 8000 retains the local SQLite reference implementation; the web explorer uses its own same-origin read-only `/knowledge/*` endpoints backed by Neon and `/graph-agent/*` for cited research. The importer reads `DATABASE_URL` and `OPENROUTER_API_KEY` from `web/.env.local`, creates a schema-scoped SELECT-only login, and stores its connection string as `KNOWLEDGE_DATABASE_URL` in the same ignored file. Unprefixed secrets stay server-side. Preserve the gitignored `data/knowledge/` directory for raw snapshots, local graph storage, private cache and typed JSONL exports. See the [coverage and caveats](reports/knowledge_foundation.md).
-
-## Trading desk (new web app)
-
-```sh
-cd web && npm install && npm run dev   # http://localhost:5180
-npm test && npm run build              # unit tests, typecheck + production build
-```
-
-`web/` is a React + Tailwind v4 + Lightweight Charts trading view built only on True Markets' **public** market-data API: no account, keys, or order endpoints. Its parts and data sources:
+`web/` is a React, Tailwind v4 and Lightweight Charts app. Market data comes from True Markets' public API, which needs no account. Every panel can be resized and collapsed, and the layout is remembered.
 
 - **Price chart:** candles at 1m–1D, with SMA, EMA, Bollinger, RSI and MACD computed by True Markets. Live ticks from the WebSocket update the latest bar.
 - **Perp order book:** live Hyperliquid perp book.
@@ -43,6 +59,8 @@ npm test && npm run build              # unit tests, typecheck + production buil
 - **AI news read:** the instrument's own Live news tab scores its latest 10 headlines by their likely effect on it, from −1 to +1. Each headline gets a green, red or grey bar, a score and a one-line reason, with an overall read (positive, negative, mixed or neutral) above the list. Haiku 5.5 does the scoring through a strict-schema tool call. A read runs each time the tab is opened or returned to, and on every instrument change. If the same 10 headlines were scored in the last 6 hours, the stored read is reused at no model cost; ↻ forces a fresh one. The Markets tab is not scored.
 - **Order flow:** live taker buy vs sell volume over 1, 5 or 15 minutes, laid out like a prediction market. A buy-share line is drawn around 50%, Buyers and Sellers outcome buttons show $ volume and trade counts and filter the feed, and an Activity feed highlights large trades. It's built from Hyperliquid's public perp trade stream, the venue behind the order book: True Markets' CeFi `TRADE` channel had no prints in the last 24h. Flow builds from page load, and it is a measure of recent volume, not a forecast.
 - **Live news:** headlines for the selected instrument, plus a Markets tab, merged from Yahoo Finance and Google News RSS. No key is needed, and the panel refreshes every minute.
+- **Creators:** a short-form feed of finance creators, showing the assets mentioned in each video, with a paper portfolio. See [`web/CREATORS.md`](web/CREATORS.md).
+- **Iris Owl:** a small mascot for the analyst, the news read, empty states and first-run tips. It stays out of trading and data panels, and **Hide owl** in the footer turns it off.
 
 News feeds are fetched server-side by the dev server's `/news` endpoint (`web/server/news.ts`), because neither feed allows browser requests. Each feed is cached for 60 seconds, and the last good copy is served if a feed fails. Yahoo's per-ticker feed drifts off-topic, so its stories are kept only when they mention the instrument. Both feeds are for personal, non-commercial use under their providers' terms.
 
@@ -53,7 +71,7 @@ News feeds are fetched server-side by the dev server's `/news` endpoint (`web/se
 
 Answers and tool steps stream to the drawer. Limits are 6 tool rounds and $0.25 per question, and a run stops when the drawer is closed or Stop is pressed. The agent cannot place orders.
 
-**Point & ask:** click **Point & ask** in the masthead, or ⌥-click anywhere, then pick any element on the desk to ask about it. An order-book row, a stat, the chart, a news headline or a trade all work.
+**Point & ask:** click the cursor icon in the masthead, or ⌥-click anywhere, then pick any element on the desk to ask about it. An order-book row, a stat, the chart, a news headline or a trade all work.
 - **What's sent:** the element's text, its panel and its label go to `/ai/ask` as clearly marked page data, along with the live desk snapshot. A row or control is picked whole, and a bare number brings its label with it.
 - **Model:** answers always come from Haiku 5.5, enforced on the server, with up to 3 tool rounds and $0.05 per question.
 - **The popover** opens beside the element and supports follow-up questions. Esc or clicking elsewhere closes it.
@@ -74,13 +92,48 @@ To enable it: `cp web/.env.example web/.env.local`, set `OPENROUTER_API_KEY`, th
 - **Key handling and logging:** the key file never reaches the browser. Every preview and order is logged to Neon (`trade_orders`; run `npm run db:migrate`).
 - **To trade:** set the variables from `web/.env.example` in `web/.env.local` and restart the dev server. Every order moves real funds; start with $1.
 
-**Storage (Neon Postgres):** set `DATABASE_URL` in `web/.env.local`, then run `npm run db:migrate`. Migrations live in `web/server/migrations/`. There are two tables:
+**Storage (Neon Postgres):** set `DATABASE_URL` in `web/.env.local`, then run `npm run db:migrate`. Migrations live in `web/server/migrations/`. There are three tables:
 - `news_articles`: each headline seen per instrument, with its first-seen time.
 - `news_sentiment_runs`: every AI news read, with scores, model, tokens and cost.
+- `trade_orders`: every trade preview and order placed from the desk.
 
-Without `DATABASE_URL` the AI read still works, but nothing is reused or kept as history.
+Without `DATABASE_URL` the AI news read still works, but nothing is reused or kept as history.
 
 Perp-only listings such as XRP and DOGE have no OHLC candles, so they chart as a sampled price line. True Markets' REST CORS policy only allows its own origin, so `/tm/*` is proxied by the Vite dev/preview server. The public WebSocket is opened directly.
+
+## Relationship graph
+
+The first [evidence graph dataset](reports/knowledge_foundation.md) covers:
+- 7,481 US-listed non-ETF securities;
+- 1,814 accounting consolidation records;
+- 26 full annual reports and filings, five issuer announcements and one annual overview.
+
+Candidate mentions are kept separate from reviewed publisher claims, and accounting links are not supply-chain links.
+
+Click **Asset graph** in the masthead to open the [relationship explorer](http://localhost:5180/?view=relationships). It has three views:
+- **Research** (the default): the entities connected by reported or candidate business links, with parallel source assertions merged into one weighted link.
+- **With listings:** adds listing and ownership references.
+- **Everything:** the complete corpus of 16,911 entities and 15,411 assertions from Neon.
+
+The directory opens on the most connected entities. Selecting one highlights its neighbours, lists its connections grouped by counterparty, and fills the evidence ledger. Each link opens its source quote and document. All **12,441 passages are embedded in pgvector** for semantic and keyword source search. Automated news-to-graph enrichment and validated financial impact modelling remain future work. [Neon implementation and validation](reports/knowledge_neon.md).
+
+```sh
+uv sync --locked --group knowledge
+uv run --group knowledge python scripts/collect_knowledge.py --phase all --limit-issuers 105
+uv run --group knowledge python scripts/index_knowledge.py
+uv run python scripts/export_knowledge.py
+uv run python scripts/query_knowledge.py 'NVIDIA TSMC Micron packaging' --entity equity:NASDAQ:NVDA --max-hops 3
+# Publish the pinned local corpus to the configured Neon database and embed missing passages:
+uv run --group knowledge python scripts/publish_knowledge_neon.py --embed
+```
+
+The graph snapshot is saved for **24 hours** in browser IndexedDB and a private server disk cache; saved layout positions are reused across reloads. It does not poll or automatically refetch on focus/reconnect. **Refresh data** explicitly revalidates Neon; unchanged data returns HTTP 304 and keeps the layout. The saved graph remains usable when API reads are unavailable.
+
+**Ask the graph** opens a source-grounded OpenRouter agent for relationship questions, industry themes and stock research shortlists. It retrieves graph links and semantic report passages, cites sources, validates listed company identities, and includes risks/missing checks with suggestions. Identical conversations against the same snapshot reuse answers for 30 minutes in server memory. It uses the collected corpus, not live prices or a validated stock-return model. [Caching, analyst details and validation](reports/graph_cache_and_agent.md).
+
+**Research people & backgrounds** in a company's graph details uses the server-side `EXA_API_KEY` to find public professional profiles, company roles, previous experience, education and research. Each returned claim includes an exact source excerpt and citation. Exa sources are cached for 24 hours; profiles remain research leads separate from accepted graph relationships. [People research implementation and validation](reports/people_research.md).
+
+The Python API on port 8000 retains the local SQLite reference implementation; the web explorer uses its own same-origin read-only `/knowledge/*` endpoints backed by Neon and `/graph-agent/*` for cited research. The importer reads `DATABASE_URL` and `OPENROUTER_API_KEY` from `web/.env.local`, creates a schema-scoped SELECT-only login, and stores its connection string as `KNOWLEDGE_DATABASE_URL` in the same ignored file. Unprefixed secrets stay server-side. Preserve the gitignored `data/knowledge/` directory for raw snapshots, local graph storage, private cache and typed JSONL exports. See the [coverage and caveats](reports/knowledge_foundation.md).
 
 ## Local dashboard and remaining MVP components
 
@@ -228,7 +281,7 @@ Funding rates are hourly decimal fractions; open interest is measured in base-as
 
 Offline verification rechecks every pinned raw and clean hash and the dataset quality reports. It also reconstructs True Markets datasets from the saved raw responses and compares every value with the Parquet snapshot. The test suite covers timestamp precision changes, exact decimals, incomplete bars, gaps, duplicate keys, invalid OHLC/volume, checksum corruption, provider identity, and funding units.
 
-Still outside this work: point-in-time news archives, verified account fees, balances, trading eligibility, and live orders. Historical paper replays use a zero-latency next-open proxy; live-data paper testing records subsequently observed bid/ask quotes. Neither establishes actual fills or profitability.
+Still outside the research pipeline: point-in-time news archives, verified account fees, balances, trading eligibility, and live orders. Live orders exist only in the trading desk, behind its guardrails. Historical paper replays use a zero-latency next-open proxy; live-data paper testing records subsequently observed bid/ask quotes. Neither establishes actual fills or profitability.
 
 ## Primary source documentation
 
