@@ -1,0 +1,155 @@
+{
+  "feature_version": "btc-causal-v1",
+  "method": {
+    "PSI": "reference deciles, 0.5 pseudocount per bin; median across 28-day audit blocks",
+    "eligibility": "calibration and audit coverage>=99.5%, IQR>0, >=10 distinct audit values",
+    "family_budgets": "equal across eligible families; an explicit design prior",
+    "outlier": "abs((x-calibration_median)/calibration_IQR)>8; raw values retained",
+    "score": "coverage*(1-outlier_fraction)*exp(-median_PSI)/(1+sum(abs(Spearman)>=0.8))",
+    "sensitivity": "redundancy thresholds 0.7 and 0.9; leave-one-audit-block-out PSI; ranges are not confidence intervals",
+    "weight_type": "unsupervised_engineering_priority_not_predictive_importance"
+  },
+  "note": "Engineering priorities only. No future labels, forecasting model, or predictive importance estimated.",
+  "periods": {
+    "audit_end_utc_exclusive": "2026-09-24T00:00:00+00:00",
+    "audit_rows": 44640,
+    "calibration_end_utc_exclusive": "2026-04-22T00:00:00+00:00",
+    "calibration_rows": 51263,
+    "holdout_rows_not_profiled": 8641,
+    "warmup_end_utc": "2025-10-26T00:05:00+00:00"
+  },
+  "scaler": {
+    "atr_14_fraction": {
+      "iqr": 0.0012588989799146213,
+      "median": 0.0016539943321813124
+    },
+    "body_fraction": {
+      "iqr": 1.0424014593530047,
+      "median": 0.0
+    },
+    "btc_eth_correlation_288": {
+      "iqr": 0.053140457014343445,
+      "median": 0.8792200327033562
+    },
+    "btc_eth_relative_60m": {
+      "iqr": 0.0030091323047614082,
+      "median": 4.119000111746374e-05
+    },
+    "btc_sol_relative_60m": {
+      "iqr": 0.004182755453023823,
+      "median": 6.37904535496503e-05
+    },
+    "close_location": {
+      "iqr": 1.287066718425939,
+      "median": -0.005896635449187393
+    },
+    "ema_gap_12_48": {
+      "iqr": 0.7630705727122509,
+      "median": -0.009152924959942797
+    },
+    "eth_return_15m": {
+      "iqr": 0.0029771905097866203,
+      "median": -4.6466997973837465e-06
+    },
+    "hourly_realized_vol_24": {
+      "iqr": 0.012207994758114349,
+      "median": 0.022191841226154568
+    },
+    "hourly_return_6h": {
+      "iqr": 0.01170013845421014,
+      "median": -0.000306326221759079
+    },
+    "log_illiquidity_48": {
+      "iqr": 0.00011690410482993464,
+      "median": 0.00024033581500109403
+    },
+    "log_quote_volume_z_288": {
+      "iqr": 1.4274082489932054,
+      "median": -0.0936908980670176
+    },
+    "log_trade_count_z_288": {
+      "iqr": 1.4729844391051898,
+      "median": -0.07472523933183291
+    },
+    "price_z_48": {
+      "iqr": 2.0780206620708093,
+      "median": 0.01046914864199985
+    },
+    "range_fraction": {
+      "iqr": 0.0015033100954082261,
+      "median": 0.0014522491398875246
+    },
+    "realized_vol_12": {
+      "iqr": 0.0030504403680135014,
+      "median": 0.0037487302018880293
+    },
+    "realized_vol_48": {
+      "iqr": 0.006178489259119557,
+      "median": 0.008273917385852954
+    },
+    "return_15m": {
+      "iqr": 0.002278192902021914,
+      "median": -8.160951903590785e-06
+    },
+    "return_30m": {
+      "iqr": 0.0032124360906315985,
+      "median": 1.4839911299802111e-05
+    },
+    "return_5m": {
+      "iqr": 0.0012959871104429865,
+      "median": 0.0
+    },
+    "return_60m": {
+      "iqr": 0.004493844825213422,
+      "median": 1.756055565849124e-06
+    },
+    "rsi_14_centered": {
+      "iqr": 0.2941335530441603,
+      "median": 0.001185779251746899
+    },
+    "taker_buy_imbalance": {
+      "iqr": 0.4536416043181882,
+      "median": -0.02001704321032116
+    },
+    "utc_time_cos": {
+      "iqr": 1.414213562373095,
+      "median": -1.8369701987210297e-16
+    },
+    "utc_time_sin": {
+      "iqr": 1.414213562373095,
+      "median": 1.2246467991473532e-16
+    },
+    "vol_ratio_12_48": {
+      "iqr": 0.4176679513644119,
+      "median": 0.9188869891107984
+    }
+  },
+  "weights": {
+    "atr_14_fraction": 0.017225895754639023,
+    "body_fraction": 0.02622500148547795,
+    "btc_eth_correlation_288": 0.031236502877890305,
+    "btc_eth_relative_60m": 0.035846228588217295,
+    "btc_sol_relative_60m": 0.038314691037314975,
+    "close_location": 0.03842644710403513,
+    "ema_gap_12_48": 0.022717995366739754,
+    "eth_return_15m": 0.019602577496577407,
+    "hourly_realized_vol_24": 0.032620673434475146,
+    "hourly_return_6h": 0.09237932656552485,
+    "log_illiquidity_48": 0.028700720524318348,
+    "log_quote_volume_z_288": 0.0321977966763774,
+    "log_trade_count_z_288": 0.03214468212019396,
+    "price_z_48": 0.062282802219544076,
+    "range_fraction": 0.060348551410486916,
+    "realized_vol_12": 0.020344774620129357,
+    "realized_vol_48": 0.018346609824391364,
+    "return_15m": 0.021130355208103052,
+    "return_30m": 0.039086736556851194,
+    "return_5m": 0.02074178664890634,
+    "return_60m": 0.021323126219399673,
+    "rsi_14_centered": 0.06271719778045594,
+    "taker_buy_imbalance": 0.03195680067911029,
+    "utc_time_cos": 0.06250000000201447,
+    "utc_time_sin": 0.06249999999798553,
+    "vol_ratio_12_48": 0.06908271980084026
+  }
+}

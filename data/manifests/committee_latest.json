@@ -1,0 +1,226 @@
+{
+  "code_sha256": {
+    "/Users/buddhsentripathi/conductor/workspaces/shipyard/banjul/scripts/committee_shadow.py": "cd5a10f8945dc4711dc8f8d557091491772fb02f5fe27ff3c3976fd3d98d2e4d",
+    "src/alphacouncil/committee/online.py": "394b87afa18b9ab09e42a0f9aadbc9178593972a6745b1128ec2eb672c2b6fae"
+  },
+  "config": {
+    "discount_per_update": 0.995,
+    "equal_weight_shrinkage": 0.1,
+    "experts": [
+      "lightgbm",
+      "ridge",
+      "kalman",
+      "mean_reversion",
+      "momentum"
+    ],
+    "horizons_minutes": [
+      5,
+      15,
+      30
+    ],
+    "learning_rate": 0.05,
+    "loss_scale_log_bps": {
+      "15": 17.32050807568877,
+      "30": 24.49489742783178,
+      "5": 10
+    },
+    "maximum_expert_weight": 0.5,
+    "maximum_scaled_squared_loss": 25,
+    "maximum_shadow_publication_delay_seconds": 30,
+    "minimum_expert_weight": 0.05,
+    "note": "Fixed engineering defaults, not selected on development, reserved or live scores. Independent per-horizon discounted squared-error losses, clipped for robustness; no trained regime switch. Forecast weights are not capital allocations.",
+    "shadow_poll_seconds": 2,
+    "version": "online-loss-v1"
+  },
+  "counts": {
+    "forecasts": 9,
+    "outcomes": 9,
+    "pending_outcomes": 0
+  },
+  "equal_weights": {
+    "kalman": 0.2,
+    "lightgbm": 0.2,
+    "mean_reversion": 0.2,
+    "momentum": 0.2,
+    "ridge": 0.2
+  },
+  "forecast_metrics": [
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.3333333333333333,
+      "horizon_minutes": 5,
+      "mae_log_bps": 14.655504339208173,
+      "model": "adaptive",
+      "mse_skill_vs_zero": -0.023778124254725475,
+      "rmse_log_bps": 16.013304624920575,
+      "rows": 3
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.3333333333333333,
+      "horizon_minutes": 5,
+      "mae_log_bps": 14.660311336268668,
+      "model": "equal_weight",
+      "mse_skill_vs_zero": -0.024591779286918358,
+      "rmse_log_bps": 16.019666705641995,
+      "rows": 3
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.0,
+      "horizon_minutes": 15,
+      "mae_log_bps": 15.46582025928966,
+      "model": "adaptive",
+      "mse_skill_vs_zero": -0.042197821766739585,
+      "rmse_log_bps": 19.673086005146814,
+      "rows": 3
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.0,
+      "horizon_minutes": 15,
+      "mae_log_bps": 15.46582025928966,
+      "model": "equal_weight",
+      "mse_skill_vs_zero": -0.042197821766739585,
+      "rmse_log_bps": 19.673086005146814,
+      "rows": 3
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.0,
+      "horizon_minutes": 30,
+      "mae_log_bps": 39.6137986531923,
+      "model": "adaptive",
+      "mse_skill_vs_zero": -0.032895351265093575,
+      "rmse_log_bps": 41.43539398652011,
+      "rows": 3
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.0,
+      "horizon_minutes": 30,
+      "mae_log_bps": 39.6137986531923,
+      "model": "equal_weight",
+      "mse_skill_vs_zero": -0.032895351265093575,
+      "rmse_log_bps": 41.43539398652011,
+      "rows": 3
+    }
+  ],
+  "hard_stop_utc": "2026-10-24T16:01:00.422313+00:00",
+  "heartbeat_utc": "2026-10-24T16:01:01.390024+00:00",
+  "latest_forecasts": [
+    {
+      "adaptive_mu": -1.3592259812736827e-05,
+      "anchor_utc": "2026-10-24T15:30:00+00:00",
+      "equal_mu": -1.5034358930884792e-05,
+      "experts": {
+        "kalman": 0.0,
+        "lightgbm": -0.0001457482626577455,
+        "mean_reversion": 3.309505420297641e-05,
+        "momentum": -0.0,
+        "ridge": 3.7481413800345134e-05
+      },
+      "horizon": 5,
+      "maturity_utc": "2026-10-24T15:35:00+00:00",
+      "mode": "LIVE_SHADOW",
+      "published_at_utc": "2026-10-24T15:30:10.519035+00:00",
+      "source_forecast_id": 34,
+      "source_published_at_utc": "2026-10-24T15:30:09.831027+00:00",
+      "weights": {
+        "kalman": 0.2014782398536456,
+        "lightgbm": 0.1914552999269335,
+        "mean_reversion": 0.202902286528848,
+        "momentum": 0.2014782398536456,
+        "ridge": 0.2026859338369272
+      }
+    },
+    {
+      "adaptive_mu": -5.054074122353721e-05,
+      "anchor_utc": "2026-10-24T15:30:00+00:00",
+      "equal_mu": -5.054074122353721e-05,
+      "experts": {
+        "kalman": 0.0,
+        "lightgbm": -0.00045299604073026795,
+        "mean_reversion": 8.691394284463514e-05,
+        "momentum": -0.0,
+        "ridge": 0.00011337839176794678
+      },
+      "horizon": 15,
+      "maturity_utc": "2026-10-24T15:45:00+00:00",
+      "mode": "LIVE_SHADOW",
+      "published_at_utc": "2026-10-24T15:30:10.519035+00:00",
+      "source_forecast_id": 35,
+      "source_published_at_utc": "2026-10-24T15:30:09.831027+00:00",
+      "weights": {
+        "kalman": 0.2,
+        "lightgbm": 0.2,
+        "mean_reversion": 0.2,
+        "momentum": 0.2,
+        "ridge": 0.2
+      }
+    },
+    {
+      "adaptive_mu": -8.462358053681104e-05,
+      "anchor_utc": "2026-10-24T15:30:00+00:00",
+      "equal_mu": -8.462358053681103e-05,
+      "experts": {
+        "kalman": 0.0,
+        "lightgbm": -0.000825176544614928,
+        "mean_reversion": 0.0001553392129032288,
+        "momentum": -0.0,
+        "ridge": 0.00024671942902764404
+      },
+      "horizon": 30,
+      "maturity_utc": "2026-10-24T16:00:00+00:00",
+      "mode": "LIVE_SHADOW",
+      "published_at_utc": "2026-10-24T15:30:10.519035+00:00",
+      "source_forecast_id": 36,
+      "source_published_at_utc": "2026-10-24T15:30:09.831027+00:00",
+      "weights": {
+        "kalman": 0.2,
+        "lightgbm": 0.2,
+        "mean_reversion": 0.2,
+        "momentum": 0.2,
+        "ridge": 0.2
+      }
+    }
+  ],
+  "live_trading_enabled": false,
+  "mode": "LIVE_SHADOW_ADAPTIVE_ONLY",
+  "note": "Shadow forecasts only; existing equal-weight and forced paper traders unchanged. Only anchors and source forecasts after shadow start are eligible; shadow publication over 30 seconds after the anchor is skipped. Requires Mac awake and online.",
+  "pid": 33469,
+  "schema_version": 1,
+  "shadow_session_directory": "data/forward/committee_shadow_20261024T151933604917Z",
+  "source_manifest_sha256_at_start": "5b227b8d07822b9875b011c8bd2f46fda7771f7eb72eb1101d4d326ef18eb76b",
+  "source_session_directory": "data/forward/20261024T143100422313Z",
+  "started_at_utc": "2026-10-24T15:19:33.604917+00:00",
+  "status": "stopped",
+  "updates_by_horizon": {
+    "15": 3,
+    "30": 3,
+    "5": 3
+  },
+  "weights_by_horizon": {
+    "15": {
+      "kalman": 0.20172186337849735,
+      "lightgbm": 0.18606309429532106,
+      "mean_reversion": 0.20474848512965582,
+      "momentum": 0.20172186337849735,
+      "ridge": 0.2057446938180283
+    },
+    "30": {
+      "kalman": 0.2025580700598604,
+      "lightgbm": 0.17454309293053158,
+      "mean_reversion": 0.20884523851664738,
+      "momentum": 0.2025580700598604,
+      "ridge": 0.21149552843310024
+    },
+    "5": {
+      "kalman": 0.20183501224388625,
+      "lightgbm": 0.18821672925317406,
+      "mean_reversion": 0.20410333694502766,
+      "momentum": 0.20183501224388625,
+      "ridge": 0.20400990931402563
+    }
+  }
+}

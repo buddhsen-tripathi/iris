@@ -1,0 +1,29 @@
+{
+  "as_of_utc": "2026-10-24T15:22:37.025798+00:00",
+  "conditional_weights_enabled": false,
+  "diagnostics": {
+    "trend_direction": "down",
+    "trend_strength": 2.5405416612193257
+  },
+  "features": {
+    "realized_vol_48": 0.009310835483637224,
+    "return_60m": -0.011827282723469779,
+    "vol_ratio_12_48": 1.637944597612641
+  },
+  "note": "Fixed causal research context only; no validated gain or automatic change to active global weights.",
+  "regime": "high_vol",
+  "schema_version": 1,
+  "source": "Existing completed features in read-only live forward ledger",
+  "source_anchor_utc": "2026-10-24T15:20:00+00:00",
+  "source_forecast_id": 28,
+  "source_observed_at_utc": "2026-10-24T15:20:08.485477+00:00",
+  "source_session_directory": "data/forward/20261024T143100422313Z",
+  "threshold_version": "fixed-causal-regime-v1",
+  "thresholds": {
+    "high_vol_4h_log_return_threshold": 0.02,
+    "high_vol_short_long_ratio_threshold": 1.5,
+    "trend_60m_vol_scale": 0.5,
+    "trend_minimum_absolute_60m_log_return": 0.002,
+    "trend_minimum_normalized_strength": 1.0
+  }
+}

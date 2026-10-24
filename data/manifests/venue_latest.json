@@ -1,0 +1,105 @@
+{
+  "availability": {
+    "allowed_asset_classes": [
+      "crypto"
+    ],
+    "allowed_product_types": [
+      "spot"
+    ],
+    "country": "US"
+  },
+  "catalog_asset_count": 219,
+  "created_at_utc": "2026-10-24T15:17:33.813470+00:00",
+  "interpretation": "Public catalog and caller-location metadata are not proof of authenticated account eligibility, balances, fees, or executable quotes. Binance model prices are not substituted for True Markets fills.",
+  "live_order_transport_implemented": false,
+  "live_trading_enabled": false,
+  "mode": "PUBLIC_CAPABILITIES_ONLY",
+  "private_account_verified": false,
+  "requests": [
+    {
+      "endpoint": "availability",
+      "receipt": {
+        "bytes": 85,
+        "error": null,
+        "headers": {
+          "Age": null,
+          "Date": "Sat, 24 Oct 2026 15:17:33 GMT",
+          "ETag": null,
+          "Last-Modified": null
+        },
+        "http_status": 200,
+        "observed_at_utc": "2026-10-24T15:17:33.683679+00:00",
+        "path": "data/venue/20261024T151733500358Z/availability_0.response",
+        "request_started_utc": "2026-10-24T15:17:33.500495+00:00",
+        "sha256": "c711cf176865922688ca3ed12a7d1a1652b8a5719f2329a79f9cdea0ae280946",
+        "url": "https://api.truemarkets.co/v1/gateway/assets/availability"
+      },
+      "status": "available"
+    },
+    {
+      "endpoint": "catalog",
+      "receipt": {
+        "bytes": 345801,
+        "error": null,
+        "headers": {
+          "Age": null,
+          "Date": "Sat, 24 Oct 2026 15:17:33 GMT",
+          "ETag": null,
+          "Last-Modified": "Sat, 24 Oct 2026 15:17:33 GMT"
+        },
+        "http_status": 200,
+        "observed_at_utc": "2026-10-24T15:17:33.811336+00:00",
+        "path": "data/venue/20261024T151733500358Z/catalog_0.response",
+        "request_started_utc": "2026-10-24T15:17:33.684148+00:00",
+        "sha256": "b758c205a1b506d9e2179f10cf823ecfd3df5d141768da91a0a8794d3eebee60",
+        "url": "https://api.truemarkets.co/v1/gateway/assets"
+      },
+      "status": "available"
+    }
+  ],
+  "schema_version": 1,
+  "selected_assets": [
+    {
+      "asset_class": "crypto",
+      "chain": null,
+      "id": "b2538174-aae3-4b55-b79f-ac177c99f816",
+      "name": "Bitcoin",
+      "status": "sell_only",
+      "symbol": "BTC",
+      "type": "spot",
+      "venue": "cefi"
+    },
+    {
+      "asset_class": "crypto",
+      "chain": "base",
+      "id": "28e9d809-26ec-4269-ba55-b1cd1e052cd8",
+      "name": "Ethereum",
+      "status": "active",
+      "symbol": "ETH",
+      "type": "spot",
+      "venue": "defi"
+    },
+    {
+      "asset_class": "crypto",
+      "chain": null,
+      "id": "742f90d4-b0db-45a4-9c21-813c152aad15",
+      "name": "Ethereum",
+      "status": "sell_only",
+      "symbol": "ETH",
+      "type": "spot",
+      "venue": "cefi"
+    },
+    {
+      "asset_class": "crypto",
+      "chain": "solana",
+      "id": "495e07ac-fa3e-4179-85b7-b1e8cece3dc4",
+      "name": "Solana",
+      "status": "active",
+      "symbol": "SOL",
+      "type": "spot",
+      "venue": "defi"
+    }
+  ],
+  "status": "complete",
+  "venue": "truemarkets"
+}

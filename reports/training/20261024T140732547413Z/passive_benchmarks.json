@@ -1,0 +1,34 @@
+[
+  {
+    "buy_hold_cash_allocated_usdt": 10.0,
+    "buy_hold_final_equity_usdt": 53.11502708892783,
+    "buy_hold_net_pnl_usdt": 3.1150270889278318,
+    "cost_scenario": "zero_cost_diagnostic",
+    "no_trade_net_pnl_usdt": 0.0,
+    "note": "One passive allocation, purchased at first evaluation open and sold at last available open before end; same assumed costs."
+  },
+  {
+    "buy_hold_cash_allocated_usdt": 10.0,
+    "buy_hold_final_equity_usdt": 53.09929849436429,
+    "buy_hold_net_pnl_usdt": 3.0992984943642874,
+    "cost_scenario": "12bps_round_trip",
+    "no_trade_net_pnl_usdt": 0.0,
+    "note": "One passive allocation, purchased at first evaluation open and sold at last available open before end; same assumed costs."
+  },
+  {
+    "buy_hold_cash_allocated_usdt": 10.0,
+    "buy_hold_final_equity_usdt": 53.083588756201344,
+    "buy_hold_net_pnl_usdt": 3.083588756201342,
+    "cost_scenario": "24bps_round_trip_base",
+    "no_trade_net_pnl_usdt": 0.0,
+    "note": "One passive allocation, purchased at first evaluation open and sold at last available open before end; same assumed costs."
+  },
+  {
+    "buy_hold_cash_allocated_usdt": 10.0,
+    "buy_hold_final_equity_usdt": 53.06267173055539,
+    "buy_hold_net_pnl_usdt": 3.0626717305553868,
+    "cost_scenario": "40bps_round_trip",
+    "no_trade_net_pnl_usdt": 0.0,
+    "note": "One passive allocation, purchased at first evaluation open and sold at last available open before end; same assumed costs."
+  }
+]

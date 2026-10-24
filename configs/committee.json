@@ -1,0 +1,15 @@
+{
+  "version": "online-loss-v1",
+  "experts": ["lightgbm", "ridge", "kalman", "mean_reversion", "momentum"],
+  "horizons_minutes": [5, 15, 30],
+  "learning_rate": 0.05,
+  "discount_per_update": 0.995,
+  "loss_scale_log_bps": {"5": 10, "15": 17.32050807568877, "30": 24.49489742783178},
+  "maximum_scaled_squared_loss": 25,
+  "minimum_expert_weight": 0.05,
+  "maximum_expert_weight": 0.5,
+  "equal_weight_shrinkage": 0.1,
+  "shadow_poll_seconds": 2,
+  "maximum_shadow_publication_delay_seconds": 30,
+  "note": "Fixed engineering defaults, not selected on development, reserved or live scores. Independent per-horizon discounted squared-error losses, clipped for robustness; no trained regime switch. Forecast weights are not capital allocations."
+}

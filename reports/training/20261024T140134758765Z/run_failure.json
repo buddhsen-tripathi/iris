@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "stage": "paper_replay",
+  "error": "AttributeError: pandas Series has no attribute has_duplicates",
+  "note": "Partial first run. Corrected in later runs; no successful training_latest manifest was published for this run."
+}

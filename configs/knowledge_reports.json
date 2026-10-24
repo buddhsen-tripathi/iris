@@ -1,0 +1,625 @@
+[
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Information Technology",
+    "aliases": [
+      "NVIDIA",
+      "Nvidia",
+      "NVIDIA Corporation"
+    ],
+    "document_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+    "landing_url": "https://investor.nvidia.com/financial-info/annual-reports-and-proxies/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2026,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "WMT",
+    "name": "Walmart Inc.",
+    "sector": "Consumer Staples",
+    "aliases": [
+      "Walmart",
+      "Walmart Inc."
+    ],
+    "document_url": "https://stock.walmart.com/_assets/_ef4b3350ef1127ae63b1dd51abb6cf31/walmart/db/950/9988/annual_report/Walmart%2B2026%2BAnnual%2BReport.pdf",
+    "landing_url": "https://stock.walmart.com/financial-information/annual-reports",
+    "document_kind": "annual_report",
+    "report_year": 2026,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "sector": "Information Technology",
+    "aliases": [
+      "Microsoft",
+      "Microsoft Corporation",
+      "Azure"
+    ],
+    "document_url": "https://www.microsoft.com/investor/reports/ar25/index.html",
+    "landing_url": "https://www.microsoft.com/investor/reports/ar25/download-center/",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase & Co.",
+    "sector": "Financials",
+    "aliases": [
+      "JPMorgan Chase",
+      "JPMorganChase",
+      "J.P. Morgan",
+      "Chase"
+    ],
+    "document_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2025.pdf",
+    "landing_url": "https://www.jpmorganchase.com/ir/annual-report",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "sector": "Health Care",
+    "aliases": [
+      "Johnson & Johnson",
+      "Johnson and Johnson"
+    ],
+    "document_url": "https://www.jnj.com/download/johnson-johnson-2025-annual-report",
+    "landing_url": "https://www.jnj.com/policies-reports",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "XOM",
+    "name": "Exxon Mobil Corporation",
+    "sector": "Energy",
+    "aliases": [
+      "ExxonMobil",
+      "Exxon Mobil",
+      "Exxon Mobil Corporation"
+    ],
+    "document_url": "https://d1io3yog0oux5.cloudfront.net/_a96001dc08c78e733f1d812ff1d75b99/exxonmobil/db/2301/22637/annual_report/2025+Annual+Report+PDF.pdf",
+    "landing_url": "https://investor.exxonmobil.com/company-information/annual-reports-proxy",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "NUE",
+    "name": "Nucor Corporation",
+    "sector": "Materials",
+    "aliases": [
+      "Nucor",
+      "Nucor Corporation"
+    ],
+    "document_url": "https://s202.q4cdn.com/531038915/files/doc_financials/2026/ar/2025-Nucor-Annual-Report.pdf",
+    "landing_url": "https://investors.nucor.com/financials/annual-reports/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "FCX",
+    "name": "Freeport-McMoRan Inc.",
+    "sector": "Materials",
+    "aliases": [
+      "Freeport-McMoRan",
+      "Freeport McMoRan",
+      "FCX"
+    ],
+    "document_url": "https://s22.q4cdn.com/529358580/files/doc_financials/annual/AR_2025.pdf",
+    "landing_url": "https://investors.fcx.com/investors/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "DE",
+    "name": "Deere & Company",
+    "sector": "Industrials",
+    "aliases": [
+      "John Deere",
+      "Deere",
+      "Deere & Company"
+    ],
+    "document_url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/ar/2025-Deere-Company-Annual-Report.pdf",
+    "landing_url": "https://investor.deere.com/home/",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "NEE",
+    "name": "NextEra Energy, Inc.",
+    "sector": "Utilities",
+    "aliases": [
+      "NextEra Energy",
+      "NextEra",
+      "Florida Power & Light"
+    ],
+    "document_url": "https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/2025%20Annual%20Report.pdf",
+    "landing_url": "https://www.investor.nexteraenergy.com/reports-and-filings/annual-reports",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "AMT",
+    "name": "American Tower Corporation",
+    "sector": "Real Estate",
+    "aliases": [
+      "American Tower",
+      "American Tower Corporation",
+      "ATC"
+    ],
+    "document_url": "https://americantower.gcs-web.com/static-files/66b0603a-d360-436a-93ec-1e9b3d369a83",
+    "landing_url": "https://americantower.gcs-web.com/financial-information/annual-reports",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "GOOG",
+    "name": "Alphabet Inc.",
+    "sector": "Communication Services",
+    "aliases": [
+      "Alphabet",
+      "Alphabet Inc.",
+      "Google",
+      "Google Cloud"
+    ],
+    "document_url": "https://abc.xyz/assets/3d/f6/d3d24976674171dd9bb86e60082e/07ccbfb974abb310531f375440041723.pdf",
+    "landing_url": "https://abc.xyz/investor/",
+    "document_kind": "10-K",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "COST",
+    "name": "Costco Wholesale Corporation",
+    "sector": "Consumer Staples",
+    "aliases": [
+      "Costco",
+      "Costco Wholesale"
+    ],
+    "document_url": "https://s201.q4cdn.com/287523651/files/doc_financials/2025/ar/COST-Annual-Report-2025.pdf",
+    "landing_url": "https://investor.costco.com/financials/annual-reports-and-proxy-statements/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "PG",
+    "name": "The Procter & Gamble Company",
+    "sector": "Consumer Staples",
+    "aliases": [
+      "Procter & Gamble",
+      "Procter and Gamble",
+      "P&G"
+    ],
+    "document_url": "https://s204.q4cdn.com/332108499/files/doc_financials/2026/ar/2026_annual_report.pdf",
+    "landing_url": "https://www.pginvestor.com/financials/annual-reports/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2026,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "HD",
+    "name": "The Home Depot, Inc.",
+    "sector": "Consumer Discretionary",
+    "aliases": [
+      "Home Depot",
+      "The Home Depot"
+    ],
+    "document_url": "https://ir.homedepot.com/~/media/Files/H/HomeDepot-IR/2026/thd-annualreport-2025.pdf",
+    "landing_url": "https://ir.homedepot.com/investor-resources/investor-documents",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "KO",
+    "name": "The Coca-Cola Company",
+    "sector": "Consumer Staples",
+    "aliases": [
+      "Coca-Cola",
+      "The Coca-Cola Company"
+    ],
+    "document_url": "https://investors.coca-colacompany.com/filings-reports/all-sec-filings/content/0001628280-26-010047/ko-20251231.htm",
+    "landing_url": "https://investors.coca-colacompany.com/filings-reports/annual-filings-10-k",
+    "document_kind": "10-K",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "V",
+    "name": "Visa Inc.",
+    "sector": "Financials",
+    "aliases": [
+      "Visa",
+      "Visa Inc."
+    ],
+    "document_url": "https://s29.q4cdn.com/385744025/files/doc_downloads/2025/Visa-Fiscal-2025-Annual-Report.pdf",
+    "landing_url": "https://annualreport.visa.com/home/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "UNH",
+    "name": "UnitedHealth Group Incorporated",
+    "sector": "Health Care",
+    "aliases": [
+      "UnitedHealth Group",
+      "UnitedHealthcare",
+      "Optum"
+    ],
+    "document_url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/UNH-Q4-2025-Form-10-K.pdf",
+    "landing_url": "https://www.unitedhealthgroup.com/investors/shareholder-materials.html",
+    "document_kind": "10-K",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "DIS",
+    "name": "The Walt Disney Company",
+    "sector": "Communication Services",
+    "aliases": [
+      "Disney",
+      "The Walt Disney Company"
+    ],
+    "document_url": "https://investors.thewaltdisneycompany.com/files/doc_financials/2025/ar/2025-Annual-Report.pdf",
+    "landing_url": "https://investors.thewaltdisneycompany.com/financials/annual-reports/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "LIN",
+    "name": "Linde plc",
+    "sector": "Materials",
+    "aliases": [
+      "Linde",
+      "Linde plc"
+    ],
+    "document_url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2025-annual-report-to-shareholders.pdf",
+    "landing_url": "https://www.linde.com/investors/financial-reports",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "ETN",
+    "name": "Eaton Corporation plc",
+    "sector": "Industrials",
+    "aliases": [
+      "Eaton",
+      "Eaton Corporation"
+    ],
+    "document_url": "https://www.eaton.com/content/dam/eaton/company/investor-relations/annual-report/eaton-2025-annual-report.pdf",
+    "landing_url": "https://www.eaton.com/us/en-us/company/investor-relations.html",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing Company Limited",
+    "sector": "Information Technology",
+    "aliases": [
+      "TSMC",
+      "Taiwan Semiconductor Manufacturing Company",
+      "Taiwan Semiconductor"
+    ],
+    "document_url": "https://investor.tsmc.com/sites/ir/sec-filings/2025_20F%20Report.pdf",
+    "landing_url": "https://investor.tsmc.com/english/annual-reports",
+    "document_kind": "20-F",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "MU",
+    "name": "Micron Technology, Inc.",
+    "sector": "Information Technology",
+    "aliases": [
+      "Micron",
+      "Micron Technology"
+    ],
+    "document_url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/ar/2025-Form-10-K.pdf",
+    "landing_url": "https://investors.micron.com/financials/annual-reports/",
+    "document_kind": "10-K",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "GE",
+    "name": "GE Aerospace",
+    "sector": "Industrials",
+    "aliases": [
+      "GE Aerospace",
+      "General Electric Aerospace"
+    ],
+    "document_url": "https://www.geaerospace.com/sites/default/files/geaerospace_2025annualreport.pdf",
+    "landing_url": "https://www.geaerospace.com/investor-relations/annual-report",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "MMM",
+    "name": "3M Company",
+    "sector": "Industrials",
+    "aliases": [
+      "3M",
+      "3M Company"
+    ],
+    "document_url": "https://investors.3m.com/financials/sec-filings/content/0000066740-26-000155/0000066740-26-000155.pdf",
+    "landing_url": "https://investors.3m.com/financials/annual-reports-proxy-statements",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "PFE",
+    "name": "Pfizer Inc.",
+    "sector": "Health Care",
+    "aliases": [
+      "Pfizer",
+      "Pfizer Inc."
+    ],
+    "document_url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q4/2025-Form-10-K.pdf",
+    "landing_url": "https://annualreview.pfizer.com/",
+    "document_kind": "10-K",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "AEP",
+    "name": "American Electric Power Company, Inc.",
+    "sector": "Utilities",
+    "aliases": [
+      "American Electric Power",
+      "American Electric Power Company",
+      "AEP"
+    ],
+    "document_url": "https://docs.aep.com/docs/investors/AnnualReportsProxies/docs/25annrep/2026ProxyAppendixA.pdf",
+    "landing_url": "https://www.aep.com/investors/financial/",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "ASML",
+    "name": "ASML Holding N.V.",
+    "sector": "Information Technology",
+    "aliases": [
+      "ASML",
+      "ASML Holding"
+    ],
+    "document_url": "https://investor.asml.com/static-files/2ad61577-1882-4473-8a69-bbaced05e0a4",
+    "landing_url": "https://www.asml.com/investors/annual-report/2025/downloads",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Information Technology",
+    "aliases": [
+      "NVIDIA",
+      "Nvidia",
+      "NVIDIA Corporation"
+    ],
+    "document_url": "https://nvidianews.nvidia.com/news/nvidia-and-tsmc-bring-ai-into-fabs-to-advance-semiconductor-design-and-manufacturing",
+    "landing_url": "https://nvidianews.nvidia.com/news/nvidia-and-tsmc-bring-ai-into-fabs-to-advance-semiconductor-design-and-manufacturing",
+    "document_kind": "partnership_announcement",
+    "report_year": 2026,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "MU",
+    "name": "Micron Technology, Inc.",
+    "sector": "Information Technology",
+    "aliases": [
+      "Micron",
+      "Micron Technology"
+    ],
+    "document_url": "https://investors.micron.com/news/press-release/2025/Micron-Innovates-From-the-Data-Center-to-the-Edge-With-NVIDIA-03-18-2025/default.aspx",
+    "landing_url": "https://investors.micron.com/news/press-release/2025/Micron-Innovates-From-the-Data-Center-to-the-Edge-With-NVIDIA-03-18-2025/default.aspx",
+    "document_kind": "partnership_announcement",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing Company Limited",
+    "sector": "Information Technology",
+    "aliases": [
+      "TSMC",
+      "Taiwan Semiconductor Manufacturing Company",
+      "Taiwan Semiconductor"
+    ],
+    "document_url": "https://pr.tsmc.com/english/news/1734",
+    "landing_url": "https://pr.tsmc.com/english/news/1734",
+    "document_kind": "partnership_announcement",
+    "report_year": 2012,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "sector": "Information Technology",
+    "aliases": [
+      "Microsoft",
+      "Microsoft Corporation",
+      "Azure"
+    ],
+    "document_url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+    "landing_url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+    "document_kind": "partnership_announcement",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Information Technology",
+    "aliases": [
+      "NVIDIA",
+      "Nvidia",
+      "NVIDIA Corporation"
+    ],
+    "document_url": "https://blogs.nvidia.com/blog/nvidia-manufacture-american-made-ai-supercomputers-us/",
+    "landing_url": "https://blogs.nvidia.com/blog/nvidia-manufacture-american-made-ai-supercomputers-us/",
+    "document_kind": "partnership_announcement",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "PLD",
+    "name": "Prologis, Inc.",
+    "sector": "Real Estate",
+    "aliases": [
+      "Prologis",
+      "Prologis Inc."
+    ],
+    "document_url": "https://www.prologis.com/annual-report-2025",
+    "landing_url": "https://www.prologis.com/annual-report-2025",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer",
+    "document_scope": "landing_or_summary_not_full_report"
+  },
+  {
+    "ticker": "PEP",
+    "name": "PepsiCo, Inc.",
+    "sector": "Consumer Staples",
+    "aliases": [
+      "PepsiCo",
+      "Pepsi",
+      "Frito-Lay"
+    ],
+    "document_url": "https://www.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/pepsico-2025-annual-report.pdf",
+    "landing_url": "https://www.pepsico.com/en/investors/annual-reports-proxy-information",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "NKE",
+    "name": "NIKE, Inc.",
+    "sector": "Consumer Discretionary",
+    "aliases": [
+      "Nike",
+      "NIKE, Inc."
+    ],
+    "document_url": "https://s1.q4cdn.com/806093406/files/doc_financials/2025/ar/Nike-Inc-2025_10K.pdf",
+    "landing_url": "https://investors.nike.com/sec-filings/annual-reports",
+    "document_kind": "10-K",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "CI",
+    "name": "The Cigna Group",
+    "sector": "Health Care",
+    "aliases": [
+      "Cigna",
+      "The Cigna Group",
+      "Evernorth"
+    ],
+    "document_url": "https://s202.q4cdn.com/757723766/files/doc_financials/2025/ar/2025-Annual-Report.pdf",
+    "landing_url": "https://investors.thecignagroup.com/financials/annual-reports/default.aspx",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "BRK-B",
+    "name": "Berkshire Hathaway Inc.",
+    "sector": "Financials",
+    "aliases": [
+      "Berkshire Hathaway",
+      "Berkshire",
+      "Berkshire Hathaway Inc."
+    ],
+    "document_url": "https://berkshirehathaway.com/2025ar/2025ar.pdf",
+    "landing_url": "https://www.berkshirehathaway.com/reports.html",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "TGT",
+    "name": "Target Corporation",
+    "sector": "Consumer Staples",
+    "aliases": [
+      "Target",
+      "Target Corporation"
+    ],
+    "document_url": "https://corporate.target.com/getmedia/79214b4b-6331-4b1c-b76f-acff121b40f9/2025-Annual-Report-Target-Corporation.pdf",
+    "landing_url": "https://corporate.target.com/investors/annual/2025-annual-report/download",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  },
+  {
+    "ticker": "COP",
+    "name": "ConocoPhillips",
+    "sector": "Energy",
+    "aliases": [
+      "ConocoPhillips",
+      "Conoco Phillips"
+    ],
+    "document_url": "https://static.conocophillips.com/files/resources/2025-conocophillips-annual-report.pdf",
+    "landing_url": "https://www.conocophillips.com/company-reports-resources/annual-report/",
+    "document_kind": "annual_report",
+    "report_year": 2025,
+    "published_at_utc": null,
+    "hosting": "issuer"
+  }
+]

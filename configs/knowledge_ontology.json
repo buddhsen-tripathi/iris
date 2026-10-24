@@ -1,0 +1,42 @@
+{
+  "version": "supply-chain-lexical-v1",
+  "description": "Lexical mentions are evidence contexts, never automatic supply-chain proof or price-impact predictions.",
+  "taxonomy": [
+    {"id":"commodity:copper","kind":"COMMODITY","name":"Copper","aliases":["copper"]},
+    {"id":"commodity:lithium","kind":"COMMODITY","name":"Lithium","aliases":["lithium"]},
+    {"id":"commodity:nickel","kind":"COMMODITY","name":"Nickel","aliases":["nickel"]},
+    {"id":"commodity:cobalt","kind":"COMMODITY","name":"Cobalt","aliases":["cobalt"]},
+    {"id":"commodity:aluminum","kind":"COMMODITY","name":"Aluminum","aliases":["aluminum","aluminium"]},
+    {"id":"commodity:steel","kind":"COMMODITY","name":"Steel","aliases":["steel"]},
+    {"id":"commodity:iron-ore","kind":"COMMODITY","name":"Iron ore","aliases":["iron ore"]},
+    {"id":"commodity:gold","kind":"COMMODITY","name":"Gold","aliases":["gold"]},
+    {"id":"commodity:silver","kind":"COMMODITY","name":"Silver","aliases":["silver"]},
+    {"id":"commodity:rare-earths","kind":"COMMODITY","name":"Rare earths","aliases":["rare earth","rare earths"]},
+    {"id":"commodity:natural-gas","kind":"COMMODITY","name":"Natural gas","aliases":["natural gas","liquefied natural gas","LNG"]},
+    {"id":"commodity:crude-oil","kind":"COMMODITY","name":"Crude oil","aliases":["crude oil","petroleum"]},
+    {"id":"commodity:coal","kind":"COMMODITY","name":"Coal","aliases":["coal"]},
+    {"id":"commodity:electricity","kind":"COMMODITY","name":"Electricity","aliases":["electricity","electric power"]},
+    {"id":"commodity:silicon","kind":"COMMODITY","name":"Silicon","aliases":["silicon"]},
+    {"id":"product:semiconductors","kind":"PRODUCT","name":"Semiconductors","aliases":["semiconductor","semiconductors","integrated circuits"]},
+    {"id":"product:memory","kind":"PRODUCT","name":"Memory chips","aliases":["memory chips","memory chip","DRAM","NAND","HBM","high bandwidth memory"]},
+    {"id":"product:networking","kind":"PRODUCT","name":"Networking equipment","aliases":["networking","networking equipment","network switches","network switch"]},
+    {"id":"industry:data-centers","kind":"INDUSTRY","name":"Data centers","aliases":["data center","data centers","data centre","data centres","datacenter","datacenters"]},
+    {"id":"product:batteries","kind":"PRODUCT","name":"Batteries","aliases":["battery","batteries","battery cells"]},
+    {"id":"product:solar","kind":"PRODUCT","name":"Solar equipment","aliases":["solar panels","solar modules","photovoltaic"]},
+    {"id":"product:servers","kind":"PRODUCT","name":"Servers","aliases":["server","servers"]},
+    {"id":"product:gpus","kind":"PRODUCT","name":"Graphics processors","aliases":["GPU","GPUs","graphics processing unit","graphics processors"]},
+    {"id":"product:wafer-fabrication","kind":"PRODUCT","name":"Wafer fabrication","aliases":["wafer fabrication","semiconductor wafers","silicon wafers","foundry services"]},
+    {"id":"industry:automotive","kind":"INDUSTRY","name":"Automotive","aliases":["automotive","automobile","automobiles","electric vehicles"]},
+    {"id":"industry:aerospace","kind":"INDUSTRY","name":"Aerospace","aliases":["aerospace","aircraft"]},
+    {"id":"industry:shipping","kind":"INDUSTRY","name":"Shipping and logistics","aliases":["ocean freight","container shipping","logistics"]},
+    {"id":"industry:construction","kind":"INDUSTRY","name":"Construction","aliases":["construction","building materials"]},
+    {"id":"industry:agriculture","kind":"INDUSTRY","name":"Agriculture","aliases":["agriculture","agricultural","fertilizer","fertilizers"]},
+    {"id":"industry:telecommunications","kind":"INDUSTRY","name":"Telecommunications","aliases":["telecommunications","telecom","wireless communications"]}
+  ],
+  "metric_domains": {
+    "security_price":["share price","stock price","equity price","market capitalization","market capitalisation"],
+    "company_operating_metrics":["revenue","revenues","operating income","operating margin","net income","earnings","production capacity","units sold","unit sales","capital expenditures","capital expenditure"],
+    "commodity_supply":["supply","supplies","supply shortage","shortage","production","output","inventory","inventories"],
+    "commodity_demand":["demand","consumption","orders","purchases","purchasing"]
+  }
+}

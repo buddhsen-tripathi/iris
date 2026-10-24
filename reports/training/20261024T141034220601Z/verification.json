@@ -1,0 +1,11 @@
+{
+  "committee_arithmetic_matches_exact_configured_weights": true,
+  "empty_trade_ledgers_are_readable_with_explicit_schema": true,
+  "input_code_and_output_hashes_verified": true,
+  "labels_and_forecasts_byte_identical_between_two_runs": true,
+  "latest_labeled_maturity_utc": "2026-09-23T23:55:00+00:00",
+  "reserved_test_outcomes_used": false,
+  "reserved_test_starts_utc": "2026-09-24T00:00:00+00:00",
+  "saved_model_max_absolute_prediction_error": 5.421010862427522e-20,
+  "unit_and_integrity_tests": "40 passed"
+}

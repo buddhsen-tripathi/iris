@@ -1,0 +1,349 @@
+{
+  "accounts": [
+    {
+      "cash": 50.0,
+      "completed_trades": 0,
+      "open_positions": 0,
+      "policy": "five_minute_only",
+      "realized_pnl_usdt": 0
+    },
+    {
+      "cash": 50.0,
+      "completed_trades": 0,
+      "open_positions": 0,
+      "policy": "with_15m_30m_confirmation",
+      "realized_pnl_usdt": 0
+    }
+  ],
+  "clock_offset_seconds": 0.337976,
+  "code_sha256": {
+    "scripts/forward_test.py": "c44cdbe5303fe61d3405e29825b6259e953ac613ef479c6a2d5f64245ebee3a2",
+    "src/alphacouncil/features/build.py": "e6fd84d864a3040ab49271d75537f0af02dae0851d5175dfb4b77ecdc9537494",
+    "src/alphacouncil/forward/__init__.py": "e91984558a0a4735397d188820219c41991d8786e06a488cfe731a9495061dd7",
+    "src/alphacouncil/forward/feed.py": "0a42e1e5807a26d084d609636dbb2e35a261bafb39bcec0701ec5bb754f52b69",
+    "src/alphacouncil/forward/ledger.py": "5afbe9727ce3c845cbbb0ce7429f8b0c173f93bde1c41e41ba6eb8b6f114987b",
+    "src/alphacouncil/models/experts.py": "8d5d9509a955e909514a876471cd010aa4c1f7d740fdf2612ee9a019dd2d4a5d",
+    "src/alphacouncil/models/frozen.py": "deff99f665f58e9fccf7849bb25c04c70be656995b836d206601fa33ae8ca2bd",
+    "uv.lock": "4e9dea944c0b39abe9bba671d95a953b9ff68f44c46d44d4d7d3ba46173578ce"
+  },
+  "config": {
+    "api_base": "https://data-api.binance.vision",
+    "execution": "Paper only. Buy at a freshly observed ask after forecast persistence, sell at a freshly observed bid at/after five minutes from entry; add assumed fees and slippage. No exchange order endpoints or account credentials.",
+    "extra_edge_buffer_bps": 2,
+    "fee_bps_per_side_assumed": 10,
+    "forecast_anchor": "Completed bar close; actual publication lag recorded. Outcomes mature at bar close + 5/15/30m, not publication time + horizon.",
+    "forecast_minutes": 60,
+    "initial_paper_cash_usdt_per_policy": 50,
+    "maximum_clock_offset_seconds": 5,
+    "maximum_forecast_delay_seconds": 30,
+    "maximum_paper_cash_per_position_usdt": 10,
+    "maximum_quote_rtt_seconds": 3,
+    "mode": "LIVE_DATA_PAPER_ONLY",
+    "paper_holding_minutes": 5,
+    "policies": [
+      "five_minute_only",
+      "with_15m_30m_confirmation"
+    ],
+    "poll_seconds": 10,
+    "provider": "binance_public_market_data",
+    "settlement_grace_minutes": 30,
+    "slippage_bps_per_side_assumed": 2,
+    "symbol": "BTCUSDT"
+  },
+  "config_sha256": "0f7c566f93be9decdd4cdcbe08228ce4e0acfa88c961369b1bb634455d62ef87",
+  "consecutive_poll_errors": 0,
+  "counts": {
+    "decisions": 24,
+    "forecast_bundles": 12,
+    "forecasts": 36,
+    "outcomes": 36,
+    "pending_outcomes": 0,
+    "positions": 0,
+    "requests": 2644
+  },
+  "exchange_rules_receipt_sha256": "29abc2f78b2dc4e5a92b87e388ed481077e9d2d659c71750872827429f725516",
+  "finished_at_utc": "2026-10-24T16:00:10.520756+00:00",
+  "forecast_metrics": [
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.5833333333333334,
+      "horizon_minutes": 5,
+      "mae_log_bps": 17.379253372669467,
+      "model": "lightgbm",
+      "mse_skill_vs_zero": 0.0023276903342301924,
+      "rmse_log_bps": 23.520665292635226,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.5,
+      "horizon_minutes": 5,
+      "mae_log_bps": 17.13854157956606,
+      "model": "ridge",
+      "mse_skill_vs_zero": -0.002656688303572352,
+      "rmse_log_bps": 23.579346804223093,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 0.0,
+      "directional_hit_rate": null,
+      "horizon_minutes": 5,
+      "mae_log_bps": 17.152254181735277,
+      "model": "kalman",
+      "mse_skill_vs_zero": 0.0,
+      "rmse_log_bps": 23.548087587518392,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.4166666666666667,
+      "horizon_minutes": 5,
+      "mae_log_bps": 17.14743435911173,
+      "model": "mean_reversion",
+      "mse_skill_vs_zero": -0.005537147299078171,
+      "rmse_log_bps": 23.61319220326094,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 0.0,
+      "directional_hit_rate": null,
+      "horizon_minutes": 5,
+      "mae_log_bps": 17.152254181735277,
+      "model": "momentum",
+      "mse_skill_vs_zero": 0.0,
+      "rmse_log_bps": 23.548087587518392,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.5833333333333334,
+      "horizon_minutes": 5,
+      "mae_log_bps": 17.193947534963563,
+      "model": "committee",
+      "mse_skill_vs_zero": -0.0001946516903170714,
+      "rmse_log_bps": 23.55037931352805,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.75,
+      "horizon_minutes": 15,
+      "mae_log_bps": 33.44924334386435,
+      "model": "lightgbm",
+      "mse_skill_vs_zero": 0.05950364832894517,
+      "rmse_log_bps": 42.70236274126152,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.5,
+      "horizon_minutes": 15,
+      "mae_log_bps": 33.93800062763703,
+      "model": "ridge",
+      "mse_skill_vs_zero": -0.003762621900343488,
+      "rmse_log_bps": 44.11526145777126,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 0.0,
+      "directional_hit_rate": null,
+      "horizon_minutes": 15,
+      "mae_log_bps": 34.04016683008642,
+      "model": "kalman",
+      "mse_skill_vs_zero": 0.0,
+      "rmse_log_bps": 44.03250040912941,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.25,
+      "horizon_minutes": 15,
+      "mae_log_bps": 34.18660722187831,
+      "model": "mean_reversion",
+      "mse_skill_vs_zero": -0.013001311872255394,
+      "rmse_log_bps": 44.31781616932062,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 0.0,
+      "directional_hit_rate": null,
+      "horizon_minutes": 15,
+      "mae_log_bps": 34.04016683008642,
+      "model": "momentum",
+      "mse_skill_vs_zero": 0.0,
+      "rmse_log_bps": 44.03250040912941,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.75,
+      "horizon_minutes": 15,
+      "mae_log_bps": 33.9308369707105,
+      "model": "committee",
+      "mse_skill_vs_zero": 0.009848968889111687,
+      "rmse_log_bps": 43.81512649418928,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.75,
+      "horizon_minutes": 30,
+      "mae_log_bps": 63.687568487023206,
+      "model": "lightgbm",
+      "mse_skill_vs_zero": 0.023970195019939133,
+      "rmse_log_bps": 71.19434019075216,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.5,
+      "horizon_minutes": 30,
+      "mae_log_bps": 64.36362059900242,
+      "model": "ridge",
+      "mse_skill_vs_zero": 0.00021294665187931994,
+      "rmse_log_bps": 72.05559086595223,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 0.0,
+      "directional_hit_rate": null,
+      "horizon_minutes": 30,
+      "mae_log_bps": 64.45020659250046,
+      "model": "kalman",
+      "mse_skill_vs_zero": 0.0,
+      "rmse_log_bps": 72.06326408987653,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.25,
+      "horizon_minutes": 30,
+      "mae_log_bps": 64.71193600499366,
+      "model": "mean_reversion",
+      "mse_skill_vs_zero": -0.011126238502332297,
+      "rmse_log_bps": 72.4630516647567,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 0.0,
+      "directional_hit_rate": null,
+      "horizon_minutes": 30,
+      "mae_log_bps": 64.45020659250046,
+      "model": "momentum",
+      "mse_skill_vs_zero": 0.0,
+      "rmse_log_bps": 72.06326408987653,
+      "rows": 12
+    },
+    {
+      "directional_coverage": 1.0,
+      "directional_hit_rate": 0.6666666666666666,
+      "horizon_minutes": 30,
+      "mae_log_bps": 64.33270765520405,
+      "model": "committee",
+      "mse_skill_vs_zero": 0.0038142576046722443,
+      "rmse_log_bps": 71.92569886070987,
+      "rows": 12
+    }
+  ],
+  "forecast_until_utc": "2026-10-24T15:31:00.422313+00:00",
+  "hard_stop_utc": "2026-10-24T16:01:00.422313+00:00",
+  "heartbeat_utc": "2026-10-24T16:00:10.520761+00:00",
+  "historical_context_sha256": {
+    "data/clean/20261024T122241389043Z/binance/spot/BTCUSDT_1h.parquet": "5cd4841603868626c2cfc6506e729cc159c92a92ada168b7a83ca8c77971ef07",
+    "data/clean/20261024T122241389043Z/binance/spot/BTCUSDT_5m.parquet": "d1ff9cfd32f7b63bda496e27b105c71cfd5a87caf730a50d7308301ecd167e10",
+    "data/clean/20261024T122241389043Z/binance/spot/ETHUSDT_5m.parquet": "e0a6dc84764c04dffb2bd3824b4869b4cd768342cf11b8bec3b6947f7a78b145",
+    "data/clean/20261024T122241389043Z/binance/spot/SOLUSDT_5m.parquet": "bd8a32500724a471eb09843a37b93575d0142911d19616231fd098d9e037ce7b"
+  },
+  "last_successful_poll_utc": "2026-10-24T16:00:10.516264+00:00",
+  "latest_forecasts": [
+    {
+      "anchor_utc": "2026-10-24T15:30:00+00:00",
+      "horizon": 5,
+      "maturity_utc": "2026-10-24T15:35:00+00:00",
+      "predictions": {
+        "committee_mu": -1.503435893088479e-05,
+        "dispersion": 6.724958783309894e-05,
+        "experts": {
+          "kalman": 0.0,
+          "lightgbm": -0.0001457482626577455,
+          "mean_reversion": 3.309505420297641e-05,
+          "momentum": -0.0,
+          "ridge": 3.7481413800345134e-05
+        }
+      },
+      "publication_lag_seconds": 9.831027,
+      "published_at_utc": "2026-10-24T15:30:09.831027+00:00"
+    },
+    {
+      "anchor_utc": "2026-10-24T15:30:00+00:00",
+      "horizon": 15,
+      "maturity_utc": "2026-10-24T15:45:00+00:00",
+      "predictions": {
+        "committee_mu": -5.054074122353721e-05,
+        "dispersion": 0.00020632124150501925,
+        "experts": {
+          "kalman": 0.0,
+          "lightgbm": -0.00045299604073026795,
+          "mean_reversion": 8.691394284463514e-05,
+          "momentum": -0.0,
+          "ridge": 0.00011337839176794678
+        }
+      },
+      "publication_lag_seconds": 9.831027,
+      "published_at_utc": "2026-10-24T15:30:09.831027+00:00"
+    },
+    {
+      "anchor_utc": "2026-10-24T15:30:00+00:00",
+      "horizon": 30,
+      "maturity_utc": "2026-10-24T16:00:00+00:00",
+      "predictions": {
+        "committee_mu": -8.462358053681104e-05,
+        "dispersion": 0.00038212859761954556,
+        "experts": {
+          "kalman": 0.0,
+          "lightgbm": -0.000825176544614928,
+          "mean_reversion": 0.0001553392129032288,
+          "momentum": -0.0,
+          "ridge": 0.00024671942902764404
+        }
+      },
+      "publication_lag_seconds": 9.831027,
+      "published_at_utc": "2026-10-24T15:30:09.831027+00:00"
+    }
+  ],
+  "log_path": ".context/forward_20261024T143059Z.log",
+  "pid": 85829,
+  "recent_events": [
+    {
+      "detail": "2026-10-24T15:30:00+00:00, horizons 5/15/30, lag 9.831s",
+      "kind": "forecast_published",
+      "time_utc": "2026-10-24T15:30:09.831027+00:00"
+    },
+    {
+      "detail": "2026-10-24T15:25:00+00:00, horizons 5/15/30, lag 8.862s",
+      "kind": "forecast_published",
+      "time_utc": "2026-10-24T15:25:08.861770+00:00"
+    },
+    {
+      "detail": "2026-10-24T15:20:00+00:00, horizons 5/15/30, lag 8.485s",
+      "kind": "forecast_published",
+      "time_utc": "2026-10-24T15:20:08.485477+00:00"
+    },
+    {
+      "detail": "2026-10-24T15:15:00+00:00, horizons 5/15/30, lag 8.776s",
+      "kind": "forecast_published",
+      "time_utc": "2026-10-24T15:15:08.775944+00:00"
+    },
+    {
+      "detail": "2026-10-24T15:10:00+00:00, horizons 5/15/30, lag 7.456s",
+      "kind": "forecast_published",
+      "time_utc": "2026-10-24T15:10:07.455700+00:00"
+    }
+  ],
+  "session_directory": "data/forward/20261024T143100422313Z",
+  "session_id": "20261024T143100422313Z",
+  "started_at_utc": "2026-10-24T14:31:00.422313+00:00",
+  "status": "completed",
+  "training_manifest_sha256": "6737d3e4c79f8635775cad935db77390c5685886093f6dcaaa57786ca8b47ee7",
+  "training_run_id": "20261024T141034220601Z"
+}

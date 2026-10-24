@@ -1,0 +1,170 @@
+[
+  {
+    "id": "bNIAi9Sm3rY",
+    "creator": "Humphrey Yang",
+    "channelURL": "https://www.youtube.com/channel/UCFBpVaKCC0ajGps1vf0AgBg",
+    "title": "If I Started Investing In 2026, This Is What I Would Do (Full Beginner’s Guide)",
+    "headline": "Your first investment starts here.",
+    "summary": "Individual stocks or a fund? Humphrey walks through the choices.",
+    "category": "stocks",
+    "publishedAt": "2025-11-28",
+    "views": 2430527,
+    "sourceURL": "https://www.youtube.com/watch?v=bNIAi9Sm3rY",
+    "clipStart": 428,
+    "clipDuration": 65,
+    "hasCaptions": true,
+    "mentions": [
+      {
+        "symbol": "AAPL",
+        "name": "Apple",
+        "at": 442,
+        "evidence": "Auto-caption mention"
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft",
+        "at": 442,
+        "evidence": "Auto-caption mention"
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA",
+        "at": 442,
+        "evidence": "Auto-caption mention"
+      },
+      {
+        "symbol": "TSLA",
+        "name": "Tesla",
+        "at": 445,
+        "evidence": "Auto-caption mention"
+      }
+    ]
+  },
+  {
+    "id": "inI0SC3Zj4A",
+    "creator": "Patrick Boyle",
+    "channelURL": "https://www.youtube.com/channel/UCASM0cgfkJxQ1ICmRilfHLw",
+    "title": "Bitcoin on the Balance Sheet: Why Companies Are Turning to Crypto as a Treasury Strategy",
+    "headline": "When a company becomes a Bitcoin bet.",
+    "summary": "Patrick explores MicroStrategy’s pivot and the Bitcoin treasury trade.",
+    "category": "stocks",
+    "publishedAt": "2025-07-05",
+    "views": 391768,
+    "sourceURL": "https://www.youtube.com/watch?v=inI0SC3Zj4A",
+    "clipStart": 136,
+    "clipDuration": 65,
+    "hasCaptions": false,
+    "mentions": [
+      {
+        "symbol": "MSTR",
+        "name": "Strategy",
+        "at": 136,
+        "evidence": "Source chapter"
+      },
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "at": 0,
+        "evidence": "Source chapter"
+      }
+    ]
+  },
+  {
+    "id": "IZWrAbFveSA",
+    "creator": "Brian Jung",
+    "channelURL": "https://www.youtube.com/channel/UCQglaVhGOBI0BR5S6IJnQPg",
+    "title": "How To Invest In Crypto Complete Beginner's Guide",
+    "headline": "Start with the Bitcoin basics.",
+    "summary": "Brian’s introduction to how Bitcoin became an investable asset.",
+    "category": "crypto",
+    "publishedAt": "2023-12-10",
+    "views": 2801442,
+    "sourceURL": "https://www.youtube.com/watch?v=IZWrAbFveSA",
+    "clipStart": 260,
+    "clipDuration": 65,
+    "hasCaptions": true,
+    "mentions": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "at": 268,
+        "evidence": "Auto-caption mention"
+      }
+    ]
+  },
+  {
+    "id": "Nv5CiRSCVxA",
+    "creator": "Ben Felix",
+    "channelURL": "https://www.youtube.com/channel/UCDXTQ8nWmx_EhZ2v-kp7QxA",
+    "title": "The Case for Index Funds",
+    "headline": "Own the market. Understand the trade-off.",
+    "summary": "Ben explains market indexes and the companies behind them.",
+    "category": "stocks",
+    "publishedAt": "2025-02-16",
+    "views": 289463,
+    "sourceURL": "https://www.youtube.com/watch?v=Nv5CiRSCVxA",
+    "clipStart": 51,
+    "clipDuration": 65,
+    "hasCaptions": true,
+    "mentions": [
+      {
+        "symbol": "AAPL",
+        "name": "Apple",
+        "at": 89,
+        "evidence": "Auto-caption mention"
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft",
+        "at": 89,
+        "evidence": "Auto-caption mention"
+      }
+    ]
+  },
+  {
+    "id": "14HIIUjOLGY",
+    "creator": "Coin Bureau",
+    "channelURL": "https://www.youtube.com/channel/UCqK_GSMbpiV8spgD3ZGloSw",
+    "title": "Crypto Trading Guide: Step-by-Step For Complete Beginners",
+    "headline": "Read the chart before the trade.",
+    "summary": "A practical introduction to price trends and candlestick charts.",
+    "category": "crypto",
+    "publishedAt": "2025-07-11",
+    "views": 541057,
+    "sourceURL": "https://www.youtube.com/watch?v=14HIIUjOLGY",
+    "clipStart": 232,
+    "clipDuration": 65,
+    "hasCaptions": true,
+    "mentions": [
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "at": 240,
+        "evidence": "Auto-caption mention"
+      }
+    ]
+  },
+  {
+    "id": "gRrHFoDzRHs",
+    "creator": "Andrei Jikh",
+    "channelURL": "https://www.youtube.com/channel/UCGy7SkBjcIAgTiwkXEtPnYg",
+    "title": "The Stock Market Is About To Flip",
+    "headline": "A different way to look at the market.",
+    "summary": "Andrei discusses index investing and the broader stock market.",
+    "category": "stocks",
+    "publishedAt": "2023-06-12",
+    "views": 190930,
+    "sourceURL": "https://www.youtube.com/watch?v=gRrHFoDzRHs",
+    "clipStart": 90,
+    "clipDuration": 65,
+    "hasCaptions": true,
+    "mentions": [
+      {
+        "symbol": "VOO",
+        "name": "Vanguard S&P 500 ETF",
+        "at": 98,
+        "evidence": "Auto-caption mention"
+      }
+    ]
+  }
+]

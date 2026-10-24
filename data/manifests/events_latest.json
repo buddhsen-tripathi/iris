@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-10-24T15:17:33.671571+00:00",
+  "events": [],
+  "feeds": [
+    {
+      "bytes": 14813,
+      "error": null,
+      "headers": {
+        "Age": "2",
+        "Date": "Sat, 24 Oct 2026 15:17:33 GMT",
+        "ETag": "\"dae62af7f5ddd1:0\"",
+        "Last-Modified": "Fri, 16 Oct 2026 15:00:18 GMT"
+      },
+      "http_status": 200,
+      "observed_at_utc": "2026-10-24T15:17:33.669017+00:00",
+      "path": "data/events/20261024T151733503178Z/fed_press_0.response",
+      "request_started_utc": "2026-10-24T15:17:33.503422+00:00",
+      "sha256": "529e889a916423a3979c1bebdd94c2b8d402889700d8c85cc4d125b7f538d327",
+      "status": "available",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml"
+    }
+  ],
+  "llm_connectors": {
+    "grok": "not_connected",
+    "jev": "not_connected"
+  },
+  "maximum_event_age_days": 7,
+  "mode": "SOURCE_BACKED_CONTEXT_ONLY",
+  "schema_version": 1,
+  "status": "complete",
+  "update_mode": "manual_collection_snapshot",
+  "use_for_forecasting": false
+}

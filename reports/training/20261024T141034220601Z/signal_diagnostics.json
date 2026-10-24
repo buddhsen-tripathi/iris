@@ -1,0 +1,7 @@
+{
+  "exceeds_2bps_simple_return_buffer": 0,
+  "maximum_committee_5m_log_bps": 1.5019234677677757,
+  "minimum_committee_5m_log_bps": -1.5938452531867529,
+  "policy_comparison_interpretation": "If both policies abstain, their relative trading performance is uninformative.",
+  "positive_committee_5m_decisions": 5339
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "coefficient": null,
+    "horizon_minutes": 5,
+    "model": "lightgbm",
+    "selected_parameter": 15
+  },
+  {
+    "coefficient": null,
+    "horizon_minutes": 5,
+    "model": "ridge",
+    "selected_parameter": 10000.0
+  },
+  {
+    "coefficient": 0.0,
+    "horizon_minutes": 5,
+    "model": "kalman",
+    "selected_parameter": 0.0001
+  },
+  {
+    "coefficient": 0.007793290366579348,
+    "horizon_minutes": 5,
+    "model": "mean_reversion",
+    "selected_parameter": null
+  },
+  {
+    "coefficient": 0.0,
+    "horizon_minutes": 5,
+    "model": "momentum",
+    "selected_parameter": null
+  },
+  {
+    "coefficient": null,
+    "horizon_minutes": 15,
+    "model": "lightgbm",
+    "selected_parameter": 7
+  },
+  {
+    "coefficient": null,
+    "horizon_minutes": 15,
+    "model": "ridge",
+    "selected_parameter": 10000.0
+  },
+  {
+    "coefficient": 0.0,
+    "horizon_minutes": 15,
+    "model": "kalman",
+    "selected_parameter": 0.0001
+  },
+  {
+    "coefficient": 0.011816438140238627,
+    "horizon_minutes": 15,
+    "model": "mean_reversion",
+    "selected_parameter": null
+  },
+  {
+    "coefficient": 0.0,
+    "horizon_minutes": 15,
+    "model": "momentum",
+    "selected_parameter": null
+  },
+  {
+    "coefficient": null,
+    "horizon_minutes": 30,
+    "model": "lightgbm",
+    "selected_parameter": 7
+  },
+  {
+    "coefficient": null,
+    "horizon_minutes": 30,
+    "model": "ridge",
+    "selected_parameter": 10000.0
+  },
+  {
+    "coefficient": 0.0,
+    "horizon_minutes": 30,
+    "model": "kalman",
+    "selected_parameter": 0.0001
+  },
+  {
+    "coefficient": 0.014933556041823878,
+    "horizon_minutes": 30,
+    "model": "mean_reversion",
+    "selected_parameter": null
+  },
+  {
+    "coefficient": 0.0,
+    "horizon_minutes": 30,
+    "model": "momentum",
+    "selected_parameter": null
+  }
+]

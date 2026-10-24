@@ -1,0 +1,22 @@
+{
+  "import": {
+    "snapshot_sha256": "161156859b4a07fdd0248de5e83891c6514ec36c3593cb2e4760766f3a05fb8e",
+    "counts": {
+      "entities": 16911,
+      "entity_snapshots": 17022,
+      "documents": 226,
+      "pages": 3529,
+      "chunks": 12441,
+      "edges": 15411
+    }
+  },
+  "access": {
+    "reader": "created_select_only_login"
+  },
+  "embeddings": {
+    "new_embeddings": 12441,
+    "prompt_tokens": 3959239,
+    "model": "openai/text-embedding-3-small",
+    "dimensions": 1536
+  }
+}

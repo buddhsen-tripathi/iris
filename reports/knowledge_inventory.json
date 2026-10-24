@@ -1,0 +1,484 @@
+{
+  "assertion_status_counts": {
+    "candidate": 6111,
+    "reference": 9295,
+    "reported": 5
+  },
+  "code_sha256": {
+    "scripts/index_knowledge.py": "d364173b133505fa1915678087c6126dc8d4a1027208d0c05446f36c10cf37fc",
+    "src/alphacouncil/knowledge/__init__.py": "72b293774eadc01e9b88bf37cd6d280c6f88399aae3b74c2bf9119e46068e633",
+    "src/alphacouncil/knowledge/collect.py": "e1bbf1286da538bc3363de0682ee776993ed2d5d1e6716189376c89560537761",
+    "src/alphacouncil/knowledge/extract.py": "a41a0a3fd718244e9e54fe58a5de8a4442dcbd62260e5cf6654cc12c49a27123",
+    "src/alphacouncil/knowledge/retrieve.py": "6ff9c81370b1da0cb793271878a65396e2eccfe8b60fb90b086aa1ee84c92152",
+    "src/alphacouncil/knowledge/store.py": "b9bb5dd8eeab8393f3220c95a3ece981ed739b0c8d5c49b6c1ca56092c1b0ebb"
+  },
+  "complete_report_research_sectors": [
+    "Communication Services",
+    "Consumer Discretionary",
+    "Consumer Staples",
+    "Energy",
+    "Financials",
+    "Health Care",
+    "Industrials",
+    "Information Technology",
+    "Materials",
+    "Real Estate",
+    "Utilities"
+  ],
+  "complete_reports": 32,
+  "completed_report_pages": 3335,
+  "config_sha256": {
+    "configs/knowledge_ontology.json": "2e7e2f4344bdad6f6f1fb780c9acb16a3d2f3310e02d3f98214c3b17d32059a6",
+    "configs/knowledge_reports.json": "8eb972d4eae94b3f0529ee047dd64dea0d47e0034abdfa317e99c32a7f8143f4",
+    "configs/knowledge_reviewed_claims.json": "b106047be25176eb83cca4901ed619136160e3d22b68fb46fd9580efbd731752",
+    "configs/knowledge_universe.json": "f199e7642bddcef9897d8cd7b9ebc5cede6946ac408c9bd6b738219e55f5c2e8"
+  },
+  "counts": {
+    "chunks": 12441,
+    "documents": 226,
+    "edges": 15411,
+    "entities": 16911,
+    "pages": 3529
+  },
+  "created_at_utc": "2026-10-24T16:48:00.084757+00:00",
+  "database": "data/knowledge/graph.sqlite3",
+  "database_sha256": "161156859b4a07fdd0248de5e83891c6514ec36c3593cb2e4760766f3a05fb8e",
+  "entity_kind_counts": {
+    "commodity": 15,
+    "company": 7482,
+    "industry": 7,
+    "legal_entity": 1918,
+    "product": 8,
+    "security": 7481
+  },
+  "issuer_enrichment_scope": 111,
+  "limitations": [
+    "Current listing directory is not a point-in-time historical universe",
+    "Only a curated subset of companies has report/LEI enrichment",
+    "Name-only identity matches are candidates, not verified legal joins",
+    "GLEIF parent links describe accounting consolidation, not supply chains",
+    "Publication timestamps unknown unless explicitly supplied; receipt timestamps are actual",
+    "No complete supply-chain coverage or financial impact model",
+    "Candidate mentions/commodity exposure are excluded from default graph traversal",
+    "Lexical and graph retrieval implemented; embeddings, community summaries and LLM generation not configured"
+  ],
+  "listing_count": 7481,
+  "mode": "EVIDENCE_GRAPH_AND_LEXICAL_RETRIEVAL",
+  "predicate_counts": {
+    "COLLABORATES_WITH": 1,
+    "DEPLOYS_TECHNOLOGY_FROM": 1,
+    "ISSUED_BY": 7481,
+    "IS_DIRECTLY_CONSOLIDATED_BY": 1814,
+    "MANUFACTURES_FOR": 1,
+    "MATCHES_LEGAL_NAME": 104,
+    "MENTIONS": 884,
+    "MENTIONS_EXPOSURE": 5123,
+    "PARTNERS_WITH": 2
+  },
+  "reports": [
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 175,
+      "sector": "Information Technology",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "status": "complete",
+      "ticker": "NVDA"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "10-K",
+      "pages": 110,
+      "sector": "Information Technology",
+      "source_url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/ar/2025-Form-10-K.pdf",
+      "status": "complete",
+      "ticker": "MU"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 99,
+      "sector": "Industrials",
+      "source_url": "https://www.geaerospace.com/sites/default/files/geaerospace_2025annualreport.pdf",
+      "status": "complete",
+      "ticker": "GE"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "PDF URL returned non-PDF content; rejected wrapper/error page",
+      "kind": "10-K",
+      "pages": 1,
+      "sector": "Communication Services",
+      "source_url": "https://abc.xyz/assets/3d/f6/d3d24976674171dd9bb86e60082e/07ccbfb974abb310531f375440041723.pdf",
+      "status": "extraction_failed",
+      "ticker": "GOOG"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 165,
+      "sector": "Energy",
+      "source_url": "https://static.conocophillips.com/files/resources/2025-conocophillips-annual-report.pdf",
+      "status": "complete",
+      "ticker": "COP"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 120,
+      "sector": "Industrials",
+      "source_url": "https://investors.3m.com/financials/sec-filings/content/0000066740-26-000155/0000066740-26-000155.pdf",
+      "status": "complete",
+      "ticker": "MMM"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 144,
+      "sector": "Utilities",
+      "source_url": "https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/2025%20Annual%20Report.pdf",
+      "status": "complete",
+      "ticker": "NEE"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 92,
+      "sector": "Consumer Staples",
+      "source_url": "https://s204.q4cdn.com/332108499/files/doc_financials/2026/ar/2026_annual_report.pdf",
+      "status": "complete",
+      "ticker": "PG"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "partnership_announcement",
+      "pages": 1,
+      "sector": "Information Technology",
+      "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+      "status": "complete",
+      "ticker": "MSFT"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "HTTP Error 403: Forbidden",
+      "kind": "annual_report",
+      "pages": 0,
+      "sector": "Consumer Staples",
+      "source_url": "https://www.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/pepsico-2025-annual-report.pdf",
+      "status": "unavailable",
+      "ticker": "PEP"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 144,
+      "sector": "Materials",
+      "source_url": "https://s202.q4cdn.com/531038915/files/doc_financials/2026/ar/2025-Nucor-Annual-Report.pdf",
+      "status": "complete",
+      "ticker": "NUE"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "response_exceeds_byte_limit",
+      "kind": "annual_report",
+      "pages": 0,
+      "sector": "Energy",
+      "source_url": "https://d1io3yog0oux5.cloudfront.net/_a96001dc08c78e733f1d812ff1d75b99/exxonmobil/db/2301/22637/annual_report/2025+Annual+Report+PDF.pdf",
+      "status": "unavailable",
+      "ticker": "XOM"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "10-K",
+      "pages": 164,
+      "sector": "Health Care",
+      "source_url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q4/2025-Form-10-K.pdf",
+      "status": "complete",
+      "ticker": "PFE"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 110,
+      "sector": "Materials",
+      "source_url": "https://s22.q4cdn.com/529358580/files/doc_financials/annual/AR_2025.pdf",
+      "status": "complete",
+      "ticker": "FCX"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 92,
+      "sector": "Consumer Discretionary",
+      "source_url": "https://ir.homedepot.com/~/media/Files/H/HomeDepot-IR/2026/thd-annualreport-2025.pdf",
+      "status": "complete",
+      "ticker": "HD"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "20-F",
+      "pages": 244,
+      "sector": "Information Technology",
+      "source_url": "https://investor.tsmc.com/sites/ir/sec-filings/2025_20F%20Report.pdf",
+      "status": "complete",
+      "ticker": "TSM"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 1,
+      "sector": "Information Technology",
+      "source_url": "https://www.microsoft.com/investor/reports/ar25/index.html",
+      "status": "complete",
+      "ticker": "MSFT"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 144,
+      "sector": "Health Care",
+      "source_url": "https://www.jnj.com/download/johnson-johnson-2025-annual-report",
+      "status": "complete",
+      "ticker": "JNJ"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "HTTP Error 403: Forbidden",
+      "kind": "annual_report",
+      "pages": 0,
+      "sector": "Real Estate",
+      "source_url": "https://americantower.gcs-web.com/static-files/66b0603a-d360-436a-93ec-1e9b3d369a83",
+      "status": "unavailable",
+      "ticker": "AMT"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 154,
+      "sector": "Financials",
+      "source_url": "https://berkshirehathaway.com/2025ar/2025ar.pdf",
+      "status": "complete",
+      "ticker": "BRK-B"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "partnership_announcement",
+      "pages": 1,
+      "sector": "Information Technology",
+      "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-tsmc-bring-ai-into-fabs-to-advance-semiconductor-design-and-manufacturing",
+      "status": "complete",
+      "ticker": "NVDA"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 91,
+      "sector": "Consumer Staples",
+      "source_url": "https://corporate.target.com/getmedia/79214b4b-6331-4b1c-b76f-acff121b40f9/2025-Annual-Report-Target-Corporation.pdf",
+      "status": "complete",
+      "ticker": "TGT"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "HTTP Error 403: Forbidden",
+      "kind": "annual_report",
+      "pages": 0,
+      "sector": "Information Technology",
+      "source_url": "https://investor.asml.com/static-files/2ad61577-1882-4473-8a69-bbaced05e0a4",
+      "status": "unavailable",
+      "ticker": "ASML"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "partnership_announcement",
+      "pages": 1,
+      "sector": "Information Technology",
+      "source_url": "https://investors.micron.com/news/press-release/2025/Micron-Innovates-From-the-Data-Center-to-the-Edge-With-NVIDIA-03-18-2025/default.aspx",
+      "status": "complete",
+      "ticker": "MU"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "10-K",
+      "pages": 86,
+      "sector": "Health Care",
+      "source_url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/UNH-Q4-2025-Form-10-K.pdf",
+      "status": "complete",
+      "ticker": "UNH"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "10-K",
+      "pages": 102,
+      "sector": "Consumer Discretionary",
+      "source_url": "https://s1.q4cdn.com/806093406/files/doc_financials/2025/ar/Nike-Inc-2025_10K.pdf",
+      "status": "complete",
+      "ticker": "NKE"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "partnership_announcement",
+      "pages": 1,
+      "sector": "Information Technology",
+      "source_url": "https://pr.tsmc.com/english/news/1734",
+      "status": "complete",
+      "ticker": "TSM"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>",
+      "kind": "annual_report",
+      "pages": 0,
+      "sector": "Consumer Staples",
+      "source_url": "https://stock.walmart.com/_assets/_ef4b3350ef1127ae63b1dd51abb6cf31/walmart/db/950/9988/annual_report/Walmart%2B2026%2BAnnual%2BReport.pdf",
+      "status": "unavailable",
+      "ticker": "WMT"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "10-K",
+      "pages": 1,
+      "sector": "Consumer Staples",
+      "source_url": "https://investors.coca-colacompany.com/filings-reports/all-sec-filings/content/0001628280-26-010047/ko-20251231.htm",
+      "status": "complete",
+      "ticker": "KO"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 178,
+      "sector": "Health Care",
+      "source_url": "https://s202.q4cdn.com/757723766/files/doc_financials/2025/ar/2025-Annual-Report.pdf",
+      "status": "complete",
+      "ticker": "CI"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 101,
+      "sector": "Industrials",
+      "source_url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/ar/2025-Deere-Company-Annual-Report.pdf",
+      "status": "complete",
+      "ticker": "DE"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "The read operation timed out",
+      "kind": "annual_report",
+      "pages": 0,
+      "sector": "Industrials",
+      "source_url": "https://www.eaton.com/content/dam/eaton/company/investor-relations/annual-report/eaton-2025-annual-report.pdf",
+      "status": "unavailable",
+      "ticker": "ETN"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "partnership_announcement",
+      "pages": 1,
+      "sector": "Information Technology",
+      "source_url": "https://blogs.nvidia.com/blog/nvidia-manufacture-american-made-ai-supercomputers-us/",
+      "status": "complete",
+      "ticker": "NVDA"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 128,
+      "sector": "Communication Services",
+      "source_url": "https://investors.thewaltdisneycompany.com/files/doc_financials/2025/ar/2025-Annual-Report.pdf",
+      "status": "complete",
+      "ticker": "DIS"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 364,
+      "sector": "Financials",
+      "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2025.pdf",
+      "status": "complete",
+      "ticker": "JPM"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 108,
+      "sector": "Materials",
+      "source_url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2025-annual-report-to-shareholders.pdf",
+      "status": "complete",
+      "ticker": "LIN"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>",
+      "kind": "annual_report",
+      "pages": 0,
+      "sector": "Utilities",
+      "source_url": "https://docs.aep.com/docs/investors/AnnualReportsProxies/docs/25annrep/2026ProxyAppendixA.pdf",
+      "status": "unavailable",
+      "ticker": "AEP"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 76,
+      "sector": "Consumer Staples",
+      "source_url": "https://s201.q4cdn.com/287523651/files/doc_financials/2025/ar/COST-Annual-Report-2025.pdf",
+      "status": "complete",
+      "ticker": "COST"
+    },
+    {
+      "document_scope": "captured_document_text",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 136,
+      "sector": "Financials",
+      "source_url": "https://s29.q4cdn.com/385744025/files/doc_downloads/2025/Visa-Fiscal-2025-Annual-Report.pdf",
+      "status": "complete",
+      "ticker": "V"
+    },
+    {
+      "document_scope": "landing_or_summary_not_full_report",
+      "error": null,
+      "kind": "annual_report",
+      "pages": 1,
+      "sector": "Real Estate",
+      "source_url": "https://www.prologis.com/annual-report-2025",
+      "status": "complete",
+      "ticker": "PLD"
+    }
+  ],
+  "schema_version": 1,
+  "scope_not_full_report_documents": 1,
+  "usable_announcement_documents": 5,
+  "usable_full_annual_or_filing_documents": 26
+}

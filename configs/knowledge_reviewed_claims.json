@@ -1,0 +1,44 @@
+{
+  "reviewed_at_utc": "2026-10-24T16:41:26.900494+00:00",
+  "reviewed_by": "agent_source_review",
+  "status": "reported",
+  "independently_verified": false,
+  "note": "Exact publisher statements, not independently confirmed active contracts, quantified exposures, causal impacts, or stock-return predictions. SPIL identity is source-scoped; no ticker inferred.",
+  "claims": [
+    {
+      "subject_ticker": "TSM",
+      "predicate": "MANUFACTURES_FOR",
+      "object_ticker": "NVDA",
+      "source_url": "https://blogs.nvidia.com/blog/nvidia-manufacture-american-made-ai-supercomputers-us/",
+      "quote": "NVIDIA Blackwell chips have started production at TSMC’s chip plants in Phoenix, Arizona."
+    },
+    {
+      "subject_ticker": "NVDA",
+      "predicate": "PARTNERS_WITH",
+      "object_ticker": "AMKR",
+      "source_url": "https://blogs.nvidia.com/blog/nvidia-manufacture-american-made-ai-supercomputers-us/",
+      "quote": "NVIDIA is partnering with Amkor and SPIL for packaging and testing operations in Arizona."
+    },
+    {
+      "subject_ticker": "NVDA",
+      "predicate": "PARTNERS_WITH",
+      "object_source_name": "SPIL",
+      "source_url": "https://blogs.nvidia.com/blog/nvidia-manufacture-american-made-ai-supercomputers-us/",
+      "quote": "NVIDIA is partnering with Amkor and SPIL for packaging and testing operations in Arizona."
+    },
+    {
+      "subject_ticker": "MU",
+      "predicate": "COLLABORATES_WITH",
+      "object_ticker": "NVDA",
+      "source_url": "https://investors.micron.com/news/press-release/2025/Micron-Innovates-From-the-Data-Center-to-the-Edge-With-NVIDIA-03-18-2025/default.aspx",
+      "quote": "Micron’s SOCAMM, a modular LPDDR5X memory solution, was developed in collaboration with NVIDIA"
+    },
+    {
+      "subject_ticker": "MSFT",
+      "predicate": "DEPLOYS_TECHNOLOGY_FROM",
+      "object_ticker": "NVDA",
+      "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+      "quote": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72"
+    }
+  ]
+}
