@@ -1,0 +1,158 @@
+[
+  {
+    "family": "trend",
+    "formula": "log(C[t]/C[t-1])",
+    "name": "return_5m",
+    "use": "Recent direction; large magnitude also signals a shock."
+  },
+  {
+    "family": "trend",
+    "formula": "log(C[t]/C[t-3])",
+    "name": "return_15m",
+    "use": "Short trend input to momentum and linear experts."
+  },
+  {
+    "family": "trend",
+    "formula": "log(C[t]/C[t-6])",
+    "name": "return_30m",
+    "use": "Intermediate trend; compare with shorter returns."
+  },
+  {
+    "family": "trend",
+    "formula": "log(C[t]/C[t-12])",
+    "name": "return_60m",
+    "use": "One-hour trend; overlaps shorter returns."
+  },
+  {
+    "family": "trend",
+    "formula": "(EMA12(log C)-EMA48(log C))/(std48(r)*sqrt(12))",
+    "name": "ema_gap_12_48",
+    "use": "Volatility-scaled trend strength, not a forecast."
+  },
+  {
+    "family": "reversion",
+    "formula": "(log C[t]-mean(log C[t-48:t-1]))/std(log C[t-48:t-1])",
+    "name": "price_z_48",
+    "use": "Distance from the preceding 4h price distribution; snapback is a hypothesis."
+  },
+  {
+    "family": "reversion",
+    "formula": "2*WilderEWMA14(gains)/(WilderEWMA14(gains)+WilderEWMA14(losses))-1",
+    "name": "rsi_14_centered",
+    "use": "Bounded price pressure; trend persistence and reversal are both possible."
+  },
+  {
+    "family": "volatility",
+    "formula": "std12(r)*sqrt(12), sample std",
+    "name": "realized_vol_12",
+    "use": "Trailing 1h risk context; no direction implied."
+  },
+  {
+    "family": "volatility",
+    "formula": "std48(r)*sqrt(48), sample std",
+    "name": "realized_vol_48",
+    "use": "Trailing 4h risk context; no direction implied."
+  },
+  {
+    "family": "volatility",
+    "formula": "std12(r)/std48(r)",
+    "name": "vol_ratio_12_48",
+    "use": "Short volatility expansion relative to the 4h window."
+  },
+  {
+    "family": "volatility",
+    "formula": "WilderEWMA14(max(H-L,abs(H-Cprev),abs(L-Cprev)))/C",
+    "name": "atr_14_fraction",
+    "use": "Typical range relative to price; a risk input, not spread or a guaranteed stop distance."
+  },
+  {
+    "family": "candle",
+    "formula": "2*(C-L)/(H-L)-1; flat bar=0",
+    "name": "close_location",
+    "use": "Where the close sits inside the completed candle."
+  },
+  {
+    "family": "candle",
+    "formula": "(C-O)/(H-L); flat bar=0",
+    "name": "body_fraction",
+    "use": "Signed body relative to candle range."
+  },
+  {
+    "family": "candle",
+    "formula": "(H-L)/C",
+    "name": "range_fraction",
+    "use": "Single-bar price expansion, not executable spread."
+  },
+  {
+    "family": "activity",
+    "formula": "(log1p(Vquote[t])-prior_mean288(log1p Vquote))/prior_std288(log1p Vquote)",
+    "name": "log_quote_volume_z_288",
+    "use": "Unusual USDT turnover relative to the preceding day."
+  },
+  {
+    "family": "activity",
+    "formula": "(log1p(N[t])-prior_mean288(log1p N))/prior_std288(log1p N)",
+    "name": "log_trade_count_z_288",
+    "use": "Unusual activity; often redundant with turnover."
+  },
+  {
+    "family": "activity",
+    "formula": "2*taker_buy_base_volume/base_volume-1; zero volume=missing",
+    "name": "taker_buy_imbalance",
+    "use": "Aggressor-buy share of executed volume; not order-book imbalance."
+  },
+  {
+    "family": "activity",
+    "formula": "log1p(1e6*mean48(abs(r)/Vquote)); zero volume=missing",
+    "name": "log_illiquidity_48",
+    "use": "Backward price-impact proxy per USDT of volume; not a fill/slippage estimate."
+  },
+  {
+    "family": "cross_asset",
+    "formula": "BTC_return60m-ETH_return60m",
+    "name": "btc_eth_relative_60m",
+    "use": "Relative BTC strength; the sign is not a proven trading rule."
+  },
+  {
+    "family": "cross_asset",
+    "formula": "log(ETH_C[t]/ETH_C[t-3])",
+    "name": "eth_return_15m",
+    "use": "Contemporaneous ETH market context available at the same bar close."
+  },
+  {
+    "family": "cross_asset",
+    "formula": "corr288(BTC_r,ETH_r)",
+    "name": "btc_eth_correlation_288",
+    "use": "Trailing 24h co-movement; no causation or lead/lag claim."
+  },
+  {
+    "family": "cross_asset",
+    "formula": "BTC_return60m-SOL_return60m",
+    "name": "btc_sol_relative_60m",
+    "use": "Relative BTC/SOL strength; controls overlap via the redundancy audit."
+  },
+  {
+    "family": "hourly_context",
+    "formula": "log(last completed BTC hourly C / hourly C six bars earlier)",
+    "name": "hourly_return_6h",
+    "use": "Slower trend context, joined backward on hourly close time."
+  },
+  {
+    "family": "hourly_context",
+    "formula": "std24(completed hourly log returns)*sqrt(24)",
+    "name": "hourly_realized_vol_24",
+    "use": "Trailing daily volatility context from completed hourly bars."
+  },
+  {
+    "family": "calendar",
+    "formula": "sin(2*pi*UTC decision minute_of_day/1440)",
+    "name": "utc_time_sin",
+    "use": "Time-of-day context; always use with the cosine partner."
+  },
+  {
+    "family": "calendar",
+    "formula": "cos(2*pi*UTC decision minute_of_day/1440)",
+    "name": "utc_time_cos",
+    "use": "Time-of-day context; no standalone buy/sell interpretation."
+  }
+]

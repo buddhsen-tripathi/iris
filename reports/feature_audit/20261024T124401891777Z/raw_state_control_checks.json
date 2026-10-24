@@ -1,0 +1,20 @@
+[
+  {
+    "candidate": "price_z_48",
+    "candidate_median_psi": 0.006374680339444917,
+    "control": "log_close",
+    "control_median_psi": 8.21009364190759
+  },
+  {
+    "candidate": "log_quote_volume_z_288",
+    "candidate_median_psi": 0.003379796680310765,
+    "control": "log_quote_volume",
+    "control_median_psi": 0.12617322720072488
+  },
+  {
+    "candidate": "log_trade_count_z_288",
+    "candidate_median_psi": 0.005030792079983845,
+    "control": "log_trade_count",
+    "control_median_psi": 0.3179464853721339
+  }
+]

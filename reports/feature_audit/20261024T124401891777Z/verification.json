@@ -1,0 +1,9 @@
+{
+  "exact_priority_sum": 1.0,
+  "feature_and_normalized_parquet_identical_across_two_runs": true,
+  "output_and_code_hashes_verified": true,
+  "prefix_cutoff_utc": "2026-09-01T12:35:00+00:00",
+  "prefix_rows_checked": 90007,
+  "real_data_prefix_matches_full_run": true,
+  "tests": "28 passed; includes future perturbation, holdout isolation, and completed-hour joins"
+}

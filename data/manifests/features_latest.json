@@ -1,0 +1,83 @@
+{
+  "audit_directory": "reports/feature_audit/20261024T124401891777Z",
+  "code_sha256": {
+    "scripts/engineer_features.py": "f5133fefa6e0b8dabdc5f7ca2fb5d660b26cff8d0fe777b1a3149b2d79ac2f49",
+    "src/alphacouncil/features/audit.py": "f5503b7dd58f9ce080349c9977bbe14fcaf38f31c150793a29f4bedfce8640f7",
+    "src/alphacouncil/features/build.py": "e6fd84d864a3040ab49271d75537f0af02dae0851d5175dfb4b77ecdc9537494",
+    "uv.lock": "0798c4a293d75ebf1a07a8d7aea89dfdf2dc47de71116a9603a2faf99a0177be"
+  },
+  "complete_feature_rows": 104832,
+  "created_at_utc": "2026-10-24T12:44:02.687157+00:00",
+  "feature_count": 26,
+  "feature_path": "data/features/20261024T124401891777Z/BTCUSDT_5m_features.parquet",
+  "feature_rows": 105120,
+  "feature_version": "btc-causal-v1",
+  "figure_notes": {
+    "correlations": "Calibration contemporaneous Spearman correlation; symmetric -1 to +1 color limits; numeric CSV provided.",
+    "weights": "All 26 priorities with heuristic sensitivity ranges, not confidence intervals; zero baseline."
+  },
+  "forecasting_models_fitted": false,
+  "labels_created": false,
+  "method": {
+    "PSI": "reference deciles, 0.5 pseudocount per bin; median across 28-day audit blocks",
+    "eligibility": "calibration and audit coverage>=99.5%, IQR>0, >=10 distinct audit values",
+    "family_budgets": "equal across eligible families; an explicit design prior",
+    "outlier": "abs((x-calibration_median)/calibration_IQR)>8; raw values retained",
+    "score": "coverage*(1-outlier_fraction)*exp(-median_PSI)/(1+sum(abs(Spearman)>=0.8))",
+    "sensitivity": "redundancy thresholds 0.7 and 0.9; leave-one-audit-block-out PSI; ranges are not confidence intervals",
+    "weight_type": "unsupervised_engineering_priority_not_predictive_importance"
+  },
+  "normalized_feature_path": "data/features/20261024T124401891777Z/BTCUSDT_5m_normalized.parquet",
+  "outputs": {
+    ".context/feature_correlations_20261024T124401891777Z.png": "4b43e5fdcdadbf10365ffc230d57001132507e0031293259e3998deed7aace2c",
+    ".context/feature_priorities_20261024T124401891777Z.png": "851a48343e57cd3cc0d6e29512d31633f51f689e522cc8a050fde4f42edf7886",
+    "data/features/20261024T124401891777Z/BTCUSDT_5m_features.parquet": "04354a040410154874197b6f5ad318262f96981bf62eed15d2de16a09791a0e4",
+    "data/features/20261024T124401891777Z/BTCUSDT_5m_normalized.parquet": "99f90eaee5b6d4fab64afa6ee17fdc1482952fcd3311c309b07ce239942cde1f",
+    "reports/feature_audit/20261024T124401891777Z/audit_correlations.csv": "a0a109700f552de20744ae24e775504d68cdc0615c7130bacc0804781fa9130c",
+    "reports/feature_audit/20261024T124401891777Z/calibration_correlations.csv": "25a3aad2702dac9387f00728555da6af67790bbe6bc01dc79152fdbc6db74db8",
+    "reports/feature_audit/20261024T124401891777Z/drift_by_block.csv": "b5d9e19f90be2143a27267b1dc12ddba210ca7e3131396a80d720b63d51dc677",
+    "reports/feature_audit/20261024T124401891777Z/feature_correlations.svg": "da5a3059b5890618b5def6de4d649ec42403bc90c7dd4696727ce31339cbe7db",
+    "reports/feature_audit/20261024T124401891777Z/feature_definitions.json": "97fda6d6034d5e40a57d425d8cb7ceb06274a62b45b8ebbb491027608dd012aa",
+    "reports/feature_audit/20261024T124401891777Z/feature_metrics.csv": "89a092b62191975b6097b19c3a8b21f0744b694f138a7bf79a3c7f1a92928377",
+    "reports/feature_audit/20261024T124401891777Z/feature_priorities.svg": "c8bf7443ee4df2abc9dbc7d12bd52246e0c35a91fbed23dcedee9330a507588a",
+    "reports/feature_audit/20261024T124401891777Z/feature_weights.json": "5a388fe2f4dfa1f3f2420fed4843123def9c5fb687a7f029437a0be736f1500d",
+    "reports/feature_audit/20261024T124401891777Z/raw_state_control_checks.json": "a1c8ccf4203ebd3aa994963a4c1b5c9432503d7182d7cde679e8da405b317f60"
+  },
+  "periods": {
+    "audit_end_utc_exclusive": "2026-09-24T00:00:00+00:00",
+    "audit_rows": 44640,
+    "calibration_end_utc_exclusive": "2026-04-22T00:00:00+00:00",
+    "calibration_rows": 51263,
+    "holdout_rows_not_profiled": 8641,
+    "warmup_end_utc": "2025-10-26T00:05:00+00:00"
+  },
+  "report": "reports/feature_engineering_draft.md",
+  "run_id": "20261024T124401891777Z",
+  "runtime": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1",
+    "python": "3.14.0"
+  },
+  "source_inputs": [
+    {
+      "path": "data/clean/20261024T122241389043Z/binance/spot/BTCUSDT_5m.parquet",
+      "sha256": "d1ff9cfd32f7b63bda496e27b105c71cfd5a87caf730a50d7308301ecd167e10"
+    },
+    {
+      "path": "data/clean/20261024T122241389043Z/binance/spot/ETHUSDT_5m.parquet",
+      "sha256": "e0a6dc84764c04dffb2bd3824b4869b4cd768342cf11b8bec3b6947f7a78b145"
+    },
+    {
+      "path": "data/clean/20261024T122241389043Z/binance/spot/SOLUSDT_5m.parquet",
+      "sha256": "bd8a32500724a471eb09843a37b93575d0142911d19616231fd098d9e037ce7b"
+    },
+    {
+      "path": "data/clean/20261024T122241389043Z/binance/spot/BTCUSDT_1h.parquet",
+      "sha256": "5cd4841603868626c2cfc6506e729cc159c92a92ada168b7a83ca8c77971ef07"
+    }
+  ],
+  "source_manifest": "data/manifests/latest.json",
+  "source_manifest_sha256": "9399c1f63150b1e4f8cee9f42455b894af21d09f4ae3199212451708f78dd1a8"
+}

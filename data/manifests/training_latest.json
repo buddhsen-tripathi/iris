@@ -1,0 +1,210 @@
+{
+  "code_sha256": {
+    "scripts/train_models.py": "d44cbb7d0f8c962e1d82cbb20d4c1fd6fb7d54013fd3608cadb8bb02ab002d37",
+    "src/alphacouncil/backtest/__init__.py": "3fed24e04aa23123c790a087b8292adf461b0810d398077d1a624e127008448e",
+    "src/alphacouncil/backtest/paper.py": "f1d2ce2d49caa780905a1ec5cb56c2e6b9f81f1df6ff3f85558e52c64f459583",
+    "src/alphacouncil/models/__init__.py": "b5a0b5567beb664d1c1d5f1e10c031225a3c2c0d750d91d7ddc814d3c419afad",
+    "src/alphacouncil/models/experts.py": "8d5d9509a955e909514a876471cd010aa4c1f7d740fdf2612ee9a019dd2d4a5d",
+    "src/alphacouncil/models/targets.py": "6e1869e6e55e334d6dca7446668b1f7f9e912e8c4bd548f7fe890779e193c357",
+    "uv.lock": "4e9dea944c0b39abe9bba671d95a953b9ff68f44c46d44d4d7d3ba46173578ce"
+  },
+  "config": {
+    "common_warmup_days": 2,
+    "ensemble": {
+      "kalman": 0.2,
+      "lightgbm": 0.2,
+      "mean_reversion": 0.2,
+      "momentum": 0.2,
+      "ridge": 0.2
+    },
+    "features": [
+      "return_5m",
+      "return_30m",
+      "price_z_48",
+      "realized_vol_48",
+      "vol_ratio_12_48",
+      "close_location",
+      "log_quote_volume_z_288",
+      "taker_buy_imbalance",
+      "log_illiquidity_48",
+      "btc_eth_relative_60m",
+      "btc_sol_relative_60m",
+      "hourly_return_6h",
+      "utc_time_sin",
+      "utc_time_cos"
+    ],
+    "horizons_minutes": [
+      5,
+      15,
+      30
+    ],
+    "initial_training_days": 240,
+    "kalman_process_to_observation_ratios": [
+      0.0001,
+      0.001
+    ],
+    "lightgbm_estimators": 180,
+    "lightgbm_learning_rate": 0.03,
+    "lightgbm_leaves": [
+      7,
+      15
+    ],
+    "lightgbm_min_child_samples": 200,
+    "lightgbm_reg_lambda": 10.0,
+    "model_selection_days": 35,
+    "paper": {
+      "cost_scenarios": [
+        {
+          "fee_bps_per_side": 0.0,
+          "impact_bps_per_side": 0.0,
+          "name": "zero_cost_diagnostic"
+        },
+        {
+          "fee_bps_per_side": 5.0,
+          "impact_bps_per_side": 1.0,
+          "name": "12bps_round_trip"
+        },
+        {
+          "fee_bps_per_side": 10.0,
+          "impact_bps_per_side": 2.0,
+          "name": "24bps_round_trip_base"
+        },
+        {
+          "fee_bps_per_side": 15.0,
+          "impact_bps_per_side": 5.0,
+          "name": "40bps_round_trip"
+        }
+      ],
+      "extra_edge_buffer_bps": 2.0,
+      "fill_assumption": "Next-bar-open proxy at the decision boundary, processed after the close/forecast event; zero latency, adverse spread/slippage on each side. Not verified executable quotes.",
+      "holding_minutes": 5,
+      "initial_cash_usdt": 50.0,
+      "maximum_cash_per_position_usdt": 10.0,
+      "mode": "SIMULATED_SPOT_LONG_ONLY"
+    },
+    "reserved_final_days": 30,
+    "ridge_alphas": [
+      1.0,
+      100.0,
+      10000.0
+    ],
+    "seed": 20261024,
+    "statistical_coefficient_bounds": [
+      0.0,
+      1.0
+    ],
+    "version": "btc-5-15-30-v1"
+  },
+  "created_at_utc": "2026-10-24T14:10:39.487522+00:00",
+  "inputs": {
+    "configs/training_5_15_30.json": "979170a94bcef938241d4030aa15d353eab2200bcd44618a4ce50181684619cd",
+    "data/clean/20261024T122241389043Z/binance/spot/BTCUSDT_5m.parquet": "d1ff9cfd32f7b63bda496e27b105c71cfd5a87caf730a50d7308301ecd167e10",
+    "data/features/20261024T124401891777Z/BTCUSDT_5m_features.parquet": "04354a040410154874197b6f5ad318262f96981bf62eed15d2de16a09791a0e4",
+    "data/manifests/features_latest.json": "50077df3f25fa53e1c85d19a2784997b72c0d71ce51ae6c45374198f826f92ba",
+    "data/manifests/latest.json": "9399c1f63150b1e4f8cee9f42455b894af21d09f4ae3199212451708f78dd1a8"
+  },
+  "labels_created": true,
+  "live_trading_enabled": false,
+  "mode": "DEVELOPMENT_REPLAY_SIMULATED",
+  "models_directory": "models/20261024T141034220601Z",
+  "outputs": {
+    ".context/training_paper_replay_20261024T141034220601Z.png": "d812659df92467b018725b049991210179e85baf99ab782174faa7698badcc0e",
+    "data/training/20261024T141034220601Z/development_forecasts.parquet": "b739842abaa2c5048d5e327530bd595edf85c5d6e09fb9a8305beb7993cc0e26",
+    "data/training/20261024T141034220601Z/labeled_features_before_reserved_test.parquet": "abab413bccc7353819b509ce8b39b4565d9ab2b20aa4174c1422e10d577a0f35",
+    "models/20261024T141034220601Z/kalman_15m.json": "e80b973af6700f42b629121148bd3e3c709106ef93a40db3e4a3b8a2152d48af",
+    "models/20261024T141034220601Z/kalman_30m.json": "b704cf3520ba71a538b7589d5079500e13ca2a8eb5efbb1532a90995107aa7e4",
+    "models/20261024T141034220601Z/kalman_5m.json": "087f8895e326a902d947eccbea644c04655abbf9ce3f46367f2997a214d21e1d",
+    "models/20261024T141034220601Z/lightgbm_15m.json": "b4279dde73cf2e34839eecc0c35bd3d35dd149d4d86d2c9a53b50a24865d3f3d",
+    "models/20261024T141034220601Z/lightgbm_15m.txt": "93b17803b1fff697f7e1399171dbe966590dad58b33e43a21fff4b457679fc17",
+    "models/20261024T141034220601Z/lightgbm_30m.json": "26e9ebdb14b9794598af593473fcb66ef03a3782eaee721aab85427b0375fe7f",
+    "models/20261024T141034220601Z/lightgbm_30m.txt": "3c2157743d3377c212d9ecd36c4dd059b2a3d917a1d71df1cf82fe252ba2fc1b",
+    "models/20261024T141034220601Z/lightgbm_5m.json": "d9315386b13976da9d65161055d6b56d7dedb5d4e40182aa8245ada59af8d87d",
+    "models/20261024T141034220601Z/lightgbm_5m.txt": "b728dace0173b9059b26293ccfac82e48ac8c9006524b385741aae8518353202",
+    "models/20261024T141034220601Z/mean_reversion_15m.json": "bb514ad703a0927705a3e501a553ca54537048f0b9e70f65d49ab390593385df",
+    "models/20261024T141034220601Z/mean_reversion_30m.json": "56ac0252d869576e5c2cba6491aa98a2fd45527390111b548ff8cdd9c61eb3aa",
+    "models/20261024T141034220601Z/mean_reversion_5m.json": "d61afdd15915bc2d5add52aa082b46108ada8ce1f62b6edb6b225d17f35e0a50",
+    "models/20261024T141034220601Z/momentum_15m.json": "458f02c6f5e197c79091f72836329a9ac20c8fbcce4a449f3f083278337fab52",
+    "models/20261024T141034220601Z/momentum_30m.json": "2f291a82354b658e3d814c9e485647cfad7ab74182baf4f914470854b18d6436",
+    "models/20261024T141034220601Z/momentum_5m.json": "63aa6c10cfe96d275250108cb6d84eed95b98b145af32e25178130de52fd0402",
+    "models/20261024T141034220601Z/ridge_15m.json": "648a461e9bafb4bac4e1d57461e0d0491c4a697a9a678e072ca54d50022e10f9",
+    "models/20261024T141034220601Z/ridge_30m.json": "4e6a0f22a8b328f2a4aee04d1e67f0db31e4f689c98eebb2f6cb04b0952207d6",
+    "models/20261024T141034220601Z/ridge_5m.json": "1514a00ade6adc4d929ffcb36206bf39a3e4f206b908781321443ffc585160ba",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/five_minute_only/decisions.csv": "d2038e06ee48596a835a9f9d96b7ffc56fc0017775551242b7f4480b29bd6d02",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/five_minute_only/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/five_minute_only/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/five_minute_only/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/with_15m_30m_confirmation/decisions.csv": "d2038e06ee48596a835a9f9d96b7ffc56fc0017775551242b7f4480b29bd6d02",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/with_15m_30m_confirmation/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/with_15m_30m_confirmation/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/12bps_round_trip/with_15m_30m_confirmation/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/five_minute_only/decisions.csv": "4946c4e8933ab6051a63a00461b794a7be9e2edcada646c0450f23e5e9d4cccc",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/five_minute_only/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/five_minute_only/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/five_minute_only/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/with_15m_30m_confirmation/decisions.csv": "4946c4e8933ab6051a63a00461b794a7be9e2edcada646c0450f23e5e9d4cccc",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/with_15m_30m_confirmation/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/with_15m_30m_confirmation/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/24bps_round_trip_base/with_15m_30m_confirmation/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/five_minute_only/decisions.csv": "27814b69ea41787ad4847b2a6fb0bb641c3ee8173ce1d23d246990708e32d45e",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/five_minute_only/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/five_minute_only/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/five_minute_only/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/with_15m_30m_confirmation/decisions.csv": "27814b69ea41787ad4847b2a6fb0bb641c3ee8173ce1d23d246990708e32d45e",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/with_15m_30m_confirmation/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/with_15m_30m_confirmation/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/40bps_round_trip/with_15m_30m_confirmation/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83",
+    "reports/training/20261024T141034220601Z/config.json": "5005f37e5764b423da9db808408dce635cc32502c38f22a0e41460163d3614db",
+    "reports/training/20261024T141034220601Z/forecast_metrics.csv": "8fbcc461ce4f2d6f67e9a7bb3f6bb0f4191c5de189e11216fb213e4bee5eb35b",
+    "reports/training/20261024T141034220601Z/model_selection.json": "47ce15f91880a23bd111e8432fc8093732434f7f3851a07f963f8f20bd44bcf9",
+    "reports/training/20261024T141034220601Z/paper_comparison.svg": "7d206df2ae872494aa160b2e16a42f7bb52ee07502a5c7a37108c0f0a3d0d046",
+    "reports/training/20261024T141034220601Z/paper_summaries.json": "0956e02106eaa56ea2a0211091fd0d98df46e634a90a930a9bb3cc1c18c4cd99",
+    "reports/training/20261024T141034220601Z/passive_benchmarks.json": "ec6adc94b5375f7cfc3fe1009a78422a926e3afb303c1a741b64674a2a3b0e38",
+    "reports/training/20261024T141034220601Z/ridge_coefficients.csv": "e1cf255a35a6048eb12f5f93f1ec60d3cec70ac71788cfa2f7ecbad060ed8736",
+    "reports/training/20261024T141034220601Z/selected_configurations.json": "7290a8116f2ecd2b6ced4c61b5ad9c2e4cde380059f4a8380aa4bdab0b9360ee",
+    "reports/training/20261024T141034220601Z/signal_diagnostics.json": "e3194d02458e20d0922266b16a7c578d1fdaab0da1156bcf137dea21c75f2eed",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/five_minute_only/decisions.csv": "0b37ef1065366776526edaf089cf4d4921cb843d71be247ea418dd6df40f94a4",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/five_minute_only/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/five_minute_only/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/five_minute_only/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/with_15m_30m_confirmation/decisions.csv": "0b37ef1065366776526edaf089cf4d4921cb843d71be247ea418dd6df40f94a4",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/with_15m_30m_confirmation/equity.csv": "c20a5aeba7754a85af93508ad3c559a4ed77e7c9e214e711a0601cdeebf8e853",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/with_15m_30m_confirmation/hourly.csv": "e3cd22cb4a8f078ee8d76f458fba6abdb46e7220c5fb68eb3411f3a201f57143",
+    "reports/training/20261024T141034220601Z/zero_cost_diagnostic/with_15m_30m_confirmation/trades.csv": "dc07eb08904eb92b47808ee5b819d765daff7a7e3f32dcb4925a41da909e7a83"
+  },
+  "report": "reports/model_training_5_15_30.md",
+  "report_directory": "reports/training/20261024T141034220601Z",
+  "reserved_outcomes_loaded": false,
+  "reserved_test_evaluated": false,
+  "run_id": "20261024T141034220601Z",
+  "runtime": {
+    "lightgbm": "4.7.0",
+    "matplotlib": "3.11.2",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "python": "3.14.0",
+    "scikit_learn": "1.9.1"
+  },
+  "saved_model_max_absolute_prediction_error": 5.421010862427522e-20,
+  "signal_diagnostics": {
+    "exceeds_2bps_simple_return_buffer": 0,
+    "maximum_committee_5m_log_bps": 1.5019234677677757,
+    "minimum_committee_5m_log_bps": -1.5938452531867529,
+    "policy_comparison_interpretation": "If both policies abstain, their relative trading performance is uninformative.",
+    "positive_committee_5m_decisions": 5339
+  },
+  "splits": {
+    "development_rows": 17274,
+    "fit_rows": 68537,
+    "maximum_fitted_target_maturity_utc": "2026-07-25T23:55:00+00:00",
+    "maximum_labeled_maturity_utc": "2026-09-23T23:55:00+00:00",
+    "model_selection_end_utc_exclusive": "2026-07-26T00:00:00+00:00",
+    "refit_rows": 78617,
+    "reserved_start_utc": "2026-09-24T00:00:00+00:00",
+    "selection_rows": 10074,
+    "source_start_utc": "2025-10-24T00:00:00+00:00",
+    "training_end_utc_exclusive": "2026-06-21T00:00:00+00:00",
+    "warmup_end_utc": "2025-10-26T00:05:00+00:00"
+  },
+  "status": "complete",
+  "training_directory": "data/training/20261024T141034220601Z"
+}

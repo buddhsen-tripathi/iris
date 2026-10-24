@@ -1,0 +1,37 @@
+{
+  "version": "btc-5-15-30-v1",
+  "horizons_minutes": [5, 15, 30],
+  "seed": 20261024,
+  "initial_training_days": 240,
+  "model_selection_days": 35,
+  "reserved_final_days": 30,
+  "common_warmup_days": 2,
+  "features": [
+    "return_5m", "return_30m", "price_z_48", "realized_vol_48", "vol_ratio_12_48",
+    "close_location", "log_quote_volume_z_288", "taker_buy_imbalance", "log_illiquidity_48",
+    "btc_eth_relative_60m", "btc_sol_relative_60m", "hourly_return_6h", "utc_time_sin", "utc_time_cos"
+  ],
+  "ridge_alphas": [1.0, 100.0, 10000.0],
+  "lightgbm_leaves": [7, 15],
+  "lightgbm_estimators": 180,
+  "lightgbm_learning_rate": 0.03,
+  "lightgbm_min_child_samples": 200,
+  "lightgbm_reg_lambda": 10.0,
+  "kalman_process_to_observation_ratios": [0.0001, 0.001],
+  "statistical_coefficient_bounds": [0.0, 1.0],
+  "ensemble": {"lightgbm": 0.2, "ridge": 0.2, "kalman": 0.2, "mean_reversion": 0.2, "momentum": 0.2},
+  "paper": {
+    "mode": "SIMULATED_SPOT_LONG_ONLY",
+    "initial_cash_usdt": 50.0,
+    "maximum_cash_per_position_usdt": 10.0,
+    "holding_minutes": 5,
+    "extra_edge_buffer_bps": 2.0,
+    "fill_assumption": "Next-bar-open proxy at the decision boundary, processed after the close/forecast event; zero latency, adverse spread/slippage on each side. Not verified executable quotes.",
+    "cost_scenarios": [
+      {"name": "zero_cost_diagnostic", "fee_bps_per_side": 0.0, "impact_bps_per_side": 0.0},
+      {"name": "12bps_round_trip", "fee_bps_per_side": 5.0, "impact_bps_per_side": 1.0},
+      {"name": "24bps_round_trip_base", "fee_bps_per_side": 10.0, "impact_bps_per_side": 2.0},
+      {"name": "40bps_round_trip", "fee_bps_per_side": 15.0, "impact_bps_per_side": 5.0}
+    ]
+  }
+}
