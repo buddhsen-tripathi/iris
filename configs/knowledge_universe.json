@@ -1,0 +1,632 @@
+[
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "AVGO",
+    "name": "Broadcom Inc.",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "AMD",
+    "name": "Advanced Micro Devices, Inc.",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "INTC",
+    "name": "Intel Corporation",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MU",
+    "name": "Micron Technology, Inc.",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "ORCL",
+    "name": "Oracle Corporation",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CRM",
+    "name": "Salesforce, Inc.",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CSCO",
+    "name": "Cisco Systems, Inc.",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "ADBE",
+    "name": "Adobe Inc.",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing Company Limited",
+    "research_bucket": "information_technology",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Alphabet Inc.",
+    "research_bucket": "communication_services",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "META",
+    "name": "Meta Platforms, Inc.",
+    "research_bucket": "communication_services",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "DIS",
+    "name": "The Walt Disney Company",
+    "research_bucket": "communication_services",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "NFLX",
+    "name": "Netflix, Inc.",
+    "research_bucket": "communication_services",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CMCSA",
+    "name": "Comcast Corporation",
+    "research_bucket": "communication_services",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "T",
+    "name": "AT&T Inc.",
+    "research_bucket": "communication_services",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "VZ",
+    "name": "Verizon Communications Inc.",
+    "research_bucket": "communication_services",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon.com, Inc.",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla, Inc.",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "HD",
+    "name": "The Home Depot, Inc.",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "LOW",
+    "name": "Lowe's Companies, Inc.",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MCD",
+    "name": "McDonald's Corporation",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "NKE",
+    "name": "NIKE, Inc.",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "SBUX",
+    "name": "Starbucks Corporation",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "GM",
+    "name": "General Motors Company",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "F",
+    "name": "Ford Motor Company",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "BKNG",
+    "name": "Booking Holdings Inc.",
+    "research_bucket": "consumer_discretionary",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "WMT",
+    "name": "Walmart Inc.",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "COST",
+    "name": "Costco Wholesale Corporation",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "PG",
+    "name": "The Procter & Gamble Company",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "KO",
+    "name": "The Coca-Cola Company",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "PEP",
+    "name": "PepsiCo, Inc.",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MDLZ",
+    "name": "Mondelez International, Inc.",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CL",
+    "name": "Colgate-Palmolive Company",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "KMB",
+    "name": "Kimberly-Clark Corporation",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "ADM",
+    "name": "Archer-Daniels-Midland Company",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "TSN",
+    "name": "Tyson Foods, Inc.",
+    "research_bucket": "consumer_staples",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "UNH",
+    "name": "UnitedHealth Group Incorporated",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "LLY",
+    "name": "Eli Lilly and Company",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "PFE",
+    "name": "Pfizer Inc.",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MRK",
+    "name": "Merck & Co., Inc.",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "ABBV",
+    "name": "AbbVie Inc.",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "TMO",
+    "name": "Thermo Fisher Scientific Inc.",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "ABT",
+    "name": "Abbott Laboratories",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MDT",
+    "name": "Medtronic plc",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CVS",
+    "name": "CVS Health Corporation",
+    "research_bucket": "health_care",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase & Co.",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "BAC",
+    "name": "Bank of America Corporation",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "WFC",
+    "name": "Wells Fargo & Company",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "C",
+    "name": "Citigroup Inc.",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "GS",
+    "name": "The Goldman Sachs Group, Inc.",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MS",
+    "name": "Morgan Stanley",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "V",
+    "name": "Visa Inc.",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MA",
+    "name": "Mastercard Incorporated",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "AXP",
+    "name": "American Express Company",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "BLK",
+    "name": "BlackRock, Inc.",
+    "research_bucket": "financials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CAT",
+    "name": "Caterpillar Inc.",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "DE",
+    "name": "Deere & Company",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "GE",
+    "name": "GE Aerospace",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "BA",
+    "name": "The Boeing Company",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "RTX",
+    "name": "RTX Corporation",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "LMT",
+    "name": "Lockheed Martin Corporation",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "HON",
+    "name": "Honeywell International Inc.",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "ETN",
+    "name": "Eaton Corporation plc",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "UPS",
+    "name": "United Parcel Service, Inc.",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "FDX",
+    "name": "FedEx Corporation",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "UNP",
+    "name": "Union Pacific Corporation",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "WM",
+    "name": "Waste Management, Inc.",
+    "research_bucket": "industrials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "XOM",
+    "name": "Exxon Mobil Corporation",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CVX",
+    "name": "Chevron Corporation",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "COP",
+    "name": "ConocoPhillips",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "SLB",
+    "name": "Schlumberger Limited",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "EOG",
+    "name": "EOG Resources, Inc.",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "MPC",
+    "name": "Marathon Petroleum Corporation",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "VLO",
+    "name": "Valero Energy Corporation",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "KMI",
+    "name": "Kinder Morgan, Inc.",
+    "research_bucket": "energy",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "NEE",
+    "name": "NextEra Energy, Inc.",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "DUK",
+    "name": "Duke Energy Corporation",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "SO",
+    "name": "The Southern Company",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "CEG",
+    "name": "Constellation Energy Corporation",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "D",
+    "name": "Dominion Energy, Inc.",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "AEP",
+    "name": "American Electric Power Company, Inc.",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "EXC",
+    "name": "Exelon Corporation",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "SRE",
+    "name": "Sempra",
+    "research_bucket": "utilities",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "LIN",
+    "name": "Linde plc",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "FCX",
+    "name": "Freeport-McMoRan Inc.",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "NUE",
+    "name": "Nucor Corporation",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "NEM",
+    "name": "Newmont Corporation",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "DOW",
+    "name": "Dow Inc.",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "DD",
+    "name": "DuPont de Nemours, Inc.",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "APD",
+    "name": "Air Products and Chemicals, Inc.",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "SHW",
+    "name": "The Sherwin-Williams Company",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "ALB",
+    "name": "Albemarle Corporation",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "STLD",
+    "name": "Steel Dynamics, Inc.",
+    "research_bucket": "materials",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "AMT",
+    "name": "American Tower Corporation",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "PLD",
+    "name": "Prologis, Inc.",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "EQIX",
+    "name": "Equinix, Inc.",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "DLR",
+    "name": "Digital Realty Trust, Inc.",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "SPG",
+    "name": "Simon Property Group, Inc.",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "O",
+    "name": "Realty Income Corporation",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "PSA",
+    "name": "Public Storage",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  },
+  {
+    "ticker": "WELL",
+    "name": "Welltower Inc.",
+    "research_bucket": "real_estate",
+    "classification_status": "curated_collection_scope_not_source_verified_sector"
+  }
+]
