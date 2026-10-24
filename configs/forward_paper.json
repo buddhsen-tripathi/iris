@@ -1,0 +1,21 @@
+{
+  "mode": "LIVE_DATA_PAPER_ONLY",
+  "provider": "binance_public_market_data",
+  "api_base": "https://data-api.binance.vision",
+  "symbol": "BTCUSDT",
+  "forecast_minutes": 60,
+  "settlement_grace_minutes": 30,
+  "poll_seconds": 10,
+  "maximum_forecast_delay_seconds": 30,
+  "maximum_clock_offset_seconds": 5,
+  "maximum_quote_rtt_seconds": 3,
+  "initial_paper_cash_usdt_per_policy": 50,
+  "maximum_paper_cash_per_position_usdt": 10,
+  "fee_bps_per_side_assumed": 10,
+  "slippage_bps_per_side_assumed": 2,
+  "extra_edge_buffer_bps": 2,
+  "paper_holding_minutes": 5,
+  "policies": ["five_minute_only", "with_15m_30m_confirmation"],
+  "forecast_anchor": "Completed bar close; actual publication lag recorded. Outcomes mature at bar close + 5/15/30m, not publication time + horizon.",
+  "execution": "Paper only. Buy at a freshly observed ask after forecast persistence, sell at a freshly observed bid at/after five minutes from entry; add assumed fees and slippage. No exchange order endpoints or account credentials."
+}

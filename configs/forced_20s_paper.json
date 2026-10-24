@@ -1,0 +1,14 @@
+{
+  "mode": "FORCED_ENTRY_PAPER_DIAGNOSTIC",
+  "policy": "forced_long_20s",
+  "interval_seconds": 20,
+  "duration_minutes": 60,
+  "exit_grace_seconds": 180,
+  "maximum_tick_delay_seconds": 5,
+  "maximum_quote_rtt_seconds": 3,
+  "initial_paper_cash_usdt": 50,
+  "maximum_paper_cash_per_position_usdt": 10,
+  "fee_bps_per_side_assumed": 10,
+  "slippage_bps_per_side_assumed": 2,
+  "execution": "Independent forced long-only paper experiment. Every UTC 20-second boundary, close the previous position at a newly observed bid, then open at the observed ask regardless of model signal. Holding duration is approximately 20 seconds; actual timestamps are recorded. Retain fees, slippage, venue size rules, cash limits, and quote checks. Missing ticks are skipped, never backfilled. No model forecasts or real orders are generated."
+}
