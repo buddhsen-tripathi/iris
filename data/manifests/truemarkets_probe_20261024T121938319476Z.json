@@ -1,0 +1,76 @@
+{
+  "checked_at_utc": "2026-10-24T12:19:38.319489+00:00",
+  "note": "Public read-only requests. Do not treat reference/history prices as executable quotes or merge them with Binance spot candles.",
+  "responses": [
+    {
+      "bytes": 142,
+      "endpoint": "candles",
+      "error": "HTTP Error 400: Bad Request",
+      "http_status": 400,
+      "path": "raw/truemarkets/20261024T121938319476Z/BTC_candles.response",
+      "retrieved_at_utc": "2026-10-24T12:19:38.541325+00:00",
+      "sha256": "cb34897c545d0d9040b48ac847445d90a81b2d035eb2807071130fa81b6ed21c",
+      "symbol": "BTC",
+      "url": "https://api.truemarkets.co/v1/defi/market/prices/candles?symbol=BTC&window=7d&resolution=5m"
+    },
+    {
+      "bytes": 142,
+      "endpoint": "history",
+      "error": "HTTP Error 400: Bad Request",
+      "http_status": 400,
+      "path": "raw/truemarkets/20261024T121938319476Z/BTC_history.response",
+      "retrieved_at_utc": "2026-10-24T12:19:38.677254+00:00",
+      "sha256": "fc11cd8e4e0d6441cdf04c0d601171248f4b4b64d7dd158f6552a0b3393ef684",
+      "symbol": "BTC",
+      "url": "https://api.truemarkets.co/v1/defi/market/prices/history?symbol=BTC&window=7d&resolution=5m"
+    },
+    {
+      "bytes": 142,
+      "endpoint": "candles",
+      "error": "HTTP Error 400: Bad Request",
+      "http_status": 400,
+      "path": "raw/truemarkets/20261024T121938319476Z/ETH_candles.response",
+      "retrieved_at_utc": "2026-10-24T12:19:38.826687+00:00",
+      "sha256": "bdd4b4d1ef29ad6b913884abcc7cc6b1357b3e120a99a7d71ed67d4f79efe905",
+      "symbol": "ETH",
+      "url": "https://api.truemarkets.co/v1/defi/market/prices/candles?symbol=ETH&window=7d&resolution=5m"
+    },
+    {
+      "bytes": 142,
+      "endpoint": "history",
+      "error": "HTTP Error 400: Bad Request",
+      "http_status": 400,
+      "path": "raw/truemarkets/20261024T121938319476Z/ETH_history.response",
+      "retrieved_at_utc": "2026-10-24T12:19:39.067832+00:00",
+      "sha256": "66876148c03ad8e09627215218285211500b1bb8c3a705d524df494abf20a244",
+      "symbol": "ETH",
+      "url": "https://api.truemarkets.co/v1/defi/market/prices/history?symbol=ETH&window=7d&resolution=5m"
+    },
+    {
+      "bytes": 142,
+      "endpoint": "candles",
+      "error": "HTTP Error 400: Bad Request",
+      "http_status": 400,
+      "path": "raw/truemarkets/20261024T121938319476Z/SOL_candles.response",
+      "retrieved_at_utc": "2026-10-24T12:19:39.189923+00:00",
+      "sha256": "568a7e78fc9df7a6252bab7d7cda037d0b9b7c28ef38aa2b5b0699b85b675542",
+      "symbol": "SOL",
+      "url": "https://api.truemarkets.co/v1/defi/market/prices/candles?symbol=SOL&window=7d&resolution=5m"
+    },
+    {
+      "bytes": 142,
+      "endpoint": "history",
+      "error": "HTTP Error 400: Bad Request",
+      "http_status": 400,
+      "path": "raw/truemarkets/20261024T121938319476Z/SOL_history.response",
+      "retrieved_at_utc": "2026-10-24T12:19:39.316430+00:00",
+      "sha256": "be0c12dfd7a1c072d8df1dc62cae867be72c2e364312eeb7b2ee5b3774229ef9",
+      "symbol": "SOL",
+      "url": "https://api.truemarkets.co/v1/defi/market/prices/history?symbol=SOL&window=7d&resolution=5m"
+    }
+  ],
+  "run_id": "20261024T121938319476Z",
+  "source_docs": "https://docs.truemarkets.co/api/market-data/market-data-service-api/",
+  "status": "unavailable",
+  "successful_requests": 0
+}
