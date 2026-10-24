@@ -1,0 +1,29 @@
+[project]
+name = "alphacouncil"
+version = "0.1.0"
+description = "Auditable historical market data for Iris"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2,<2.4", "pandas>=2.2,<3", "pyarrow>=19,<24"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+analysis = ["matplotlib>=3.9,<4"]
+training = ["scikit-learn>=1.6,<2", "lightgbm>=4.6,<5"]
+web = [
+    "fastapi>=0.115,<1",
+    "httpx>=0.28,<1",
+    "uvicorn>=0.34,<1",
+]
+knowledge = [
+    "httpx>=0.28,<1",
+    "psycopg[binary]>=3.2,<4",
+    "pypdf>=6,<7",
+    "python-dotenv>=1,<2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
