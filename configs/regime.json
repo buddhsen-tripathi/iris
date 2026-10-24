@@ -1,0 +1,12 @@
+{
+  "version": "fixed-causal-regime-v1",
+  "high_vol_4h_log_return_threshold": 0.02,
+  "high_vol_short_long_ratio_threshold": 1.5,
+  "trend_minimum_absolute_60m_log_return": 0.002,
+  "trend_minimum_normalized_strength": 1.0,
+  "trend_60m_vol_scale": 0.5,
+  "minimum_bucket_outcomes": 30,
+  "prior_outcome_count": 100,
+  "conditional_weights_enabled": false,
+  "note": "Opt-in research primitives only. Fixed design thresholds, not fitted on future outcomes or selected for trading performance. Active global committee remains unchanged."
+}

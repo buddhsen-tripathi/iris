@@ -1,0 +1,221 @@
+{
+  "config": {
+    "discount_per_update": 0.995,
+    "equal_weight_shrinkage": 0.1,
+    "experts": [
+      "lightgbm",
+      "ridge",
+      "kalman",
+      "mean_reversion",
+      "momentum"
+    ],
+    "horizons_minutes": [
+      5,
+      15,
+      30
+    ],
+    "learning_rate": 0.05,
+    "loss_scale_log_bps": {
+      "15": 17.32050807568877,
+      "30": 24.49489742783178,
+      "5": 10
+    },
+    "maximum_expert_weight": 0.5,
+    "maximum_scaled_squared_loss": 25,
+    "maximum_shadow_publication_delay_seconds": 30,
+    "minimum_expert_weight": 0.05,
+    "note": "Fixed engineering defaults, not selected on development, reserved or live scores. Independent per-horizon discounted squared-error losses, clipped for robustness; no trained regime switch. Forecast weights are not capital allocations.",
+    "shadow_poll_seconds": 2,
+    "version": "online-loss-v1"
+  },
+  "config_sha256": "cd83306281305c870a94b2faa9afbc7c6a4c68d089551c37759f273036c6446c",
+  "counts": {
+    "forecasts": 51822,
+    "outcomes": 51822,
+    "pending_outcomes": 0
+  },
+  "created_at_utc": "2026-10-24T15:17:11.401383+00:00",
+  "equal_weights": {
+    "kalman": 0.2,
+    "lightgbm": 0.2,
+    "mean_reversion": 0.2,
+    "momentum": 0.2,
+    "ridge": 0.2
+  },
+  "forecast_metrics": [
+    {
+      "directional_coverage": 0.9925321292115318,
+      "directional_hit_rate": 0.5088363954505687,
+      "horizon_minutes": 5,
+      "mae_log_bps": 6.932070919006674,
+      "model": "adaptive",
+      "mse_skill_vs_zero": 0.0002558488578310314,
+      "rmse_log_bps": 10.988852185713661,
+      "rows": 17274
+    },
+    {
+      "directional_coverage": 0.9925321292115318,
+      "directional_hit_rate": 0.5080198308544766,
+      "horizon_minutes": 5,
+      "mae_log_bps": 6.932186412823948,
+      "model": "equal_weight",
+      "mse_skill_vs_zero": 0.00022910635783635058,
+      "rmse_log_bps": 10.988999157023272,
+      "rows": 17274
+    },
+    {
+      "directional_coverage": 0.9983211763343753,
+      "directional_hit_rate": 0.5191069875326182,
+      "horizon_minutes": 15,
+      "mae_log_bps": 11.991129338531413,
+      "model": "adaptive",
+      "mse_skill_vs_zero": -0.0007191619827400242,
+      "rmse_log_bps": 18.981200394395124,
+      "rows": 17274
+    },
+    {
+      "directional_coverage": 0.9983211763343753,
+      "directional_hit_rate": 0.5188750362423891,
+      "horizon_minutes": 15,
+      "mae_log_bps": 11.99107001302605,
+      "model": "equal_weight",
+      "mse_skill_vs_zero": -0.0007459891611101277,
+      "rmse_log_bps": 18.981454815742957,
+      "rows": 17274
+    },
+    {
+      "directional_coverage": 0.9990158619891166,
+      "directional_hit_rate": 0.5185142261111433,
+      "horizon_minutes": 30,
+      "mae_log_bps": 17.0528815684991,
+      "model": "adaptive",
+      "mse_skill_vs_zero": -0.0005458721508684317,
+      "rmse_log_bps": 26.974279298992254,
+      "rows": 17274
+    },
+    {
+      "directional_coverage": 0.9990158619891166,
+      "directional_hit_rate": 0.5190937011067972,
+      "horizon_minutes": 30,
+      "mae_log_bps": 17.053635856450253,
+      "model": "equal_weight",
+      "mse_skill_vs_zero": -0.0005706572674890609,
+      "rmse_log_bps": 26.97461339487757,
+      "rows": 17274
+    }
+  ],
+  "latest_forecasts": [
+    {
+      "adaptive_mu": -1.1483921117948622e-06,
+      "anchor_utc": "2026-09-23T23:25:00+00:00",
+      "equal_mu": -1.1235683573455882e-06,
+      "experts": {
+        "kalman": 0.0,
+        "lightgbm": 2.1773045087153373e-06,
+        "mean_reversion": -1.0822244754572281e-06,
+        "momentum": -0.0,
+        "ridge": -6.712921819986051e-06
+      },
+      "horizon": 5,
+      "maturity_utc": "2026-09-23T23:30:00+00:00",
+      "mode": "DEVELOPMENT_REPLAY",
+      "published_at_utc": "2026-09-23T23:25:00+00:00",
+      "source_forecast_id": 51820,
+      "source_published_at_utc": "2026-09-23T23:25:00+00:00",
+      "weights": {
+        "kalman": 0.19903729853243787,
+        "lightgbm": 0.19806753463583837,
+        "mean_reversion": 0.20093796186561005,
+        "momentum": 0.19903729853243787,
+        "ridge": 0.20291990643367577
+      }
+    },
+    {
+      "adaptive_mu": -1.0493041995551674e-05,
+      "anchor_utc": "2026-09-23T23:25:00+00:00",
+      "equal_mu": -1.0396996397647604e-05,
+      "experts": {
+        "kalman": 0.0,
+        "lightgbm": -2.0919781739915674e-05,
+        "mean_reversion": -2.8421284832491814e-06,
+        "momentum": -0.0,
+        "ridge": -2.8223071765073163e-05
+      },
+      "horizon": 15,
+      "maturity_utc": "2026-09-23T23:40:00+00:00",
+      "mode": "DEVELOPMENT_REPLAY",
+      "published_at_utc": "2026-09-23T23:25:00+00:00",
+      "source_forecast_id": 51821,
+      "source_published_at_utc": "2026-09-23T23:25:00+00:00",
+      "weights": {
+        "kalman": 0.19802817849134452,
+        "lightgbm": 0.17832762439377445,
+        "mean_reversion": 0.20683724653764204,
+        "momentum": 0.19802817849134452,
+        "ridge": 0.21877877208589444
+      }
+    },
+    {
+      "adaptive_mu": -3.0456575009604036e-05,
+      "anchor_utc": "2026-09-23T23:25:00+00:00",
+      "equal_mu": -2.9940052341545992e-05,
+      "experts": {
+        "kalman": 0.0,
+        "lightgbm": -6.805179312851113e-05,
+        "mean_reversion": -5.079668314518618e-06,
+        "momentum": -0.0,
+        "ridge": -7.656880026470021e-05
+      },
+      "horizon": 30,
+      "maturity_utc": "2026-09-23T23:55:00+00:00",
+      "mode": "DEVELOPMENT_REPLAY",
+      "published_at_utc": "2026-09-23T23:25:00+00:00",
+      "source_forecast_id": 51822,
+      "source_published_at_utc": "2026-09-23T23:25:00+00:00",
+      "weights": {
+        "kalman": 0.19647697798523533,
+        "lightgbm": 0.18441859681518805,
+        "mean_reversion": 0.20217783301832015,
+        "momentum": 0.19647697798523533,
+        "ridge": 0.22044961419602113
+      }
+    }
+  ],
+  "ledger_directory": "data/forward/committee_development_20261024T151706339788Z",
+  "live_trading_enabled": false,
+  "mode": "DEVELOPMENT_REPLAY",
+  "observation_assumption": "Historical maturity timestamp, processed strictly before subsequent decision timestamps; no real historical receipt times available.",
+  "reserved_test_evaluated": false,
+  "schema_version": 1,
+  "source": "data/training/20261024T141034220601Z/development_forecasts.parquet",
+  "source_sha256": "b739842abaa2c5048d5e327530bd595edf85c5d6e09fb9a8305beb7993cc0e26",
+  "training_run_id": "20261024T141034220601Z",
+  "updates_by_horizon": {
+    "15": 17274,
+    "30": 17274,
+    "5": 17274
+  },
+  "weights_by_horizon": {
+    "15": {
+      "kalman": 0.1980561572842105,
+      "lightgbm": 0.178773698419911,
+      "mean_reversion": 0.20677650498514813,
+      "momentum": 0.1980561572842105,
+      "ridge": 0.21833748202651984
+    },
+    "30": {
+      "kalman": 0.1960691785928288,
+      "lightgbm": 0.18545621282579886,
+      "mean_reversion": 0.2020923394858603,
+      "momentum": 0.1960691785928288,
+      "ridge": 0.22031309050268325
+    },
+    "5": {
+      "kalman": 0.19904791235943406,
+      "lightgbm": 0.19813677764623192,
+      "mean_reversion": 0.20092624448238658,
+      "momentum": 0.19904791235943406,
+      "ridge": 0.2028411531525133
+    }
+  }
+}
