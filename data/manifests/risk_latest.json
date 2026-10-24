@@ -1,0 +1,92 @@
+{
+  "configuration": {
+    "fee_bps_per_side": "10",
+    "maximum_account_loss_fraction": "0.01",
+    "maximum_clock_offset_seconds": 5,
+    "maximum_entry_cost": "10",
+    "maximum_planned_loss": "0.50",
+    "maximum_quote_age_seconds": 3,
+    "maximum_quote_rtt_seconds": 3,
+    "maximum_spread_bps": "25",
+    "maximum_uncertainty_fraction": "0.05",
+    "minimum_net_edge_bps": "2",
+    "proposal_lifetime_seconds": 20,
+    "slippage_bps_per_side": "2"
+  },
+  "context": {
+    "account": {
+      "account_id": "paper:20261024T143100422313Z:five_minute_only",
+      "cash": "50.0",
+      "equity": "50.0",
+      "open_positions": 0
+    },
+    "clock_offset_seconds": "0.336244",
+    "forecast": {
+      "downside_fraction": null,
+      "downside_validation_id": null,
+      "expected_return_fraction": "-1.5034245915476932e-05",
+      "expires_at": "2026-10-24T15:35:00+00:00",
+      "forecast_id": "20261024T143100422313Z:34",
+      "published_at": "2026-10-24T15:30:09.831027+00:00",
+      "reference_price": "79361.64",
+      "symbol": "BTCUSDT",
+      "uncertainty_fraction": null,
+      "uncertainty_validation_id": null
+    },
+    "now": "2026-10-24T15:49:26.504635+00:00",
+    "permissions": {
+      "forced_paper_diagnostic": false,
+      "instrument": "spot",
+      "kill_switch": false,
+      "leverage": "1",
+      "mode": "paper",
+      "paper_enabled": true,
+      "side": "BUY"
+    },
+    "quote": {
+      "ask": "79556.15",
+      "ask_size": "4.22913",
+      "bid": "79556.14",
+      "bid_size": "1.98871",
+      "observed_at": "2026-10-24T15:49:26.503096+00:00",
+      "receipt_sha256": "619ae57517ea7b484c922853a730d96d5e90d8514cb0f1e2357cf4496c292528",
+      "requested_at": "2026-10-24T15:49:25.637305+00:00",
+      "round_trip_seconds": "0.865791",
+      "symbol": "BTCUSDT"
+    },
+    "venue": {
+      "market_quantity_step": "0.00000000",
+      "maximum_notional": "9000000.0",
+      "maximum_quantity": "148.61336895",
+      "minimum_notional": "5.0",
+      "minimum_quantity": "1e-05",
+      "quantity_step": "0.00001000",
+      "spot_allowed": true,
+      "symbol": "BTCUSDT",
+      "trading_enabled": true
+    }
+  },
+  "created_at_utc": "2026-10-24T15:49:26.504635+00:00",
+  "decision": {
+    "allowed": false,
+    "measurements": {},
+    "proposal": null,
+    "reasons": [
+      "forecast_future_or_expired",
+      "validated_uncertainty_required",
+      "validated_independent_downside_required"
+    ]
+  },
+  "forecast_source": "fixed_equal_weight_baseline",
+  "heartbeat_utc": "2026-10-24T15:49:26.504635+00:00",
+  "interpretation": "This independent review does not alter already running paper experiments. Expert dispersion is not treated as validated predictive uncertainty. Missing validated downside and uncertainty must refuse a signal proposal.",
+  "live_trading_enabled": false,
+  "mode": "INDEPENDENT_PAPER_RISK_REVIEW",
+  "pid": 33276,
+  "review_directory": "data/risk/20261024T151923977951Z",
+  "schema_version": 1,
+  "source_session_directory": "data/forward/20261024T143100422313Z",
+  "status": "complete",
+  "submits_orders": false,
+  "worker_status": "finished"
+}

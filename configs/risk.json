@@ -1,0 +1,14 @@
+{
+  "maximum_entry_cost": "10",
+  "maximum_planned_loss": "0.50",
+  "maximum_account_loss_fraction": "0.01",
+  "fee_bps_per_side": "10",
+  "slippage_bps_per_side": "2",
+  "minimum_net_edge_bps": "2",
+  "maximum_uncertainty_fraction": "0.05",
+  "maximum_spread_bps": "25",
+  "maximum_quote_age_seconds": 3,
+  "maximum_quote_rtt_seconds": 3,
+  "maximum_clock_offset_seconds": 5,
+  "proposal_lifetime_seconds": 20
+}
